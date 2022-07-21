@@ -1,0 +1,314 @@
+BEGIN;
+
+
+CREATE TABLE IF NOT EXISTS public.abusers
+(
+    id serial NOT NULL,
+    name character varying(30),
+    contact_number numeric(20, 0),
+    gender_id integer,
+    relationship_to_client character varying(20),
+    PRIMARY KEY (id)
+);
+
+COMMENT ON TABLE public.abusers
+    IS 'Table to store details of alledged abusers';
+
+CREATE TABLE IF NOT EXISTS public.abuses
+(
+    id serial NOT NULL,
+    type_of character varying(50) unique,
+    date_created date,
+    date_updated date DEFAULT current_date,
+    PRIMARY KEY (id)
+);
+
+COMMENT ON TABLE public.abuses
+    IS 'Type of abuse to referrence';
+
+CREATE TABLE IF NOT EXISTS public.case_activities
+(
+    id serial NOT NULL,
+    activity_type character varying(20),
+    activity_description text,
+    case_id uuid,
+    date_created date,
+    date_updated date DEFAULT current_date,
+    user_id integer,
+    PRIMARY KEY (id)
+);
+
+COMMENT ON TABLE public.case_activities
+    IS 'table listing possible states a case may be in';
+
+CREATE TABLE IF NOT EXISTS public.cases
+(
+    client_id uuid,
+    case_number uuid NOT NULL,
+    client_referrence_number numeric(6, 0),
+    abuser_id integer,
+    abuse_id integer,
+    date_created date,
+    date_updated date DEFAULT current_date,
+    details_of_incident text,
+    PRIMARY KEY (case_number)
+);
+
+COMMENT ON TABLE public.cases
+    IS 'table containing case details and case -number to referrence';
+
+CREATE TABLE IF NOT EXISTS public.clients
+(
+    name character varying(80) NOT NULL,
+    id serial NOT NULL,
+    gender_id integer,
+    address text,
+    date_of_birth date,
+    government_id numeric(30, 0),
+    phone_number numeric(20, 0),
+    email text,
+    race_id integer,
+    languages text,
+    education_level character varying(50),
+    marital_status_id integer,
+    number_of_dependants numeric(3, 0),
+    date_created date,
+    date_updated date DEFAULT current_date,
+    client_id uuid,
+    PRIMARY KEY (id)
+);
+
+COMMENT ON TABLE public.clients
+    IS 'Table of all client dater with referrences to other tables';
+
+CREATE TABLE IF NOT EXISTS public.dependants
+(
+    id serial NOT NULL,
+    relationship character varying(20),
+    name character varying(50),
+    "age/DOB" character varying(30),
+    date_created date,
+    date_updated date DEFAULT current_date,
+    PRIMARY KEY (id)
+);
+
+COMMENT ON TABLE public.dependants
+    IS 'Table to store information about client depedants';
+
+CREATE TABLE IF NOT EXISTS public.gender
+(
+    id serial NOT NULL,
+    name character varying(50) unique,
+    date_created date,
+    date_updated date DEFAULT current_date,
+    abbreviation character varying(5),
+    PRIMARY KEY (id)
+);
+
+COMMENT ON TABLE public.gender
+    IS 'Gender table to referrence';
+
+CREATE TABLE IF NOT EXISTS public.marital_status
+(
+    id serial NOT NULL,
+    name character varying(30) unique,
+    date_created date,
+    date_updated date DEFAULT current_date,
+    PRIMARY KEY (id)
+);
+
+COMMENT ON TABLE public.marital_status
+    IS 'Marital status to referrence';
+
+CREATE TABLE IF NOT EXISTS public.notifications
+(
+    time_sent time with time zone,
+    subject character varying(30),
+    info text,
+    receiver_type integer,
+    receiver_id integer,
+    date_created date,
+    date_updated date,
+    id serial NOT NULL,
+    PRIMARY KEY (id)
+);
+
+COMMENT ON TABLE public.notifications
+    IS 'table listing notification details';
+
+CREATE TABLE IF NOT EXISTS public.race
+(
+    id serial NOT NULL,
+    name character varying(30) unique,
+    date_created date,
+    date_updated date DEFAULT current_date,
+    PRIMARY KEY (id)
+);
+
+COMMENT ON TABLE public.race
+    IS 'Table of races to referrence';
+
+CREATE TABLE IF NOT EXISTS public.referrals
+(
+    referring_org_touching_nations_id uuid,
+    client_id uuid,
+    id serial NOT NULL,
+    date_created date,
+    date_updated date DEFAULT current_date,
+    alternate_contact_number numeric(20, 0),
+    employer character varying(30),
+    job_title character varying(30),
+    work_number numeric(20, 0),
+    abuser_id integer,
+    date_of_incident date,
+    location_of_incident character varying(30),
+    dependant_id integer,
+    case_number uuid,
+    what_has_been_done text,
+    ongoing_involvement character varying(3),
+    client_aware_of_referral character varying(3),
+    client_willing_to_travel character varying(3),
+    PRIMARY KEY (id)
+);
+
+COMMENT ON TABLE public.referrals
+    IS 'Table to collect data from referral forms submitted by referring orginizations.';
+
+CREATE TABLE IF NOT EXISTS public.referring_orginizations
+(
+    id serial NOT NULL,
+    orginization_name character varying(50),
+    location text,
+    contact_number numeric(20, 0),
+    email text,
+    authorized_person_name character varying(30),
+    authorized_person_contact numeric(20),
+    orginization_type character varying(20),
+    touching_nations_id uuid unique,
+    date_created date,
+    date_updated date DEFAULT current_date,
+    PRIMARY KEY (id)
+);
+
+COMMENT ON TABLE public.referring_orginizations
+    IS 'table containing referring orgonization details for referrence';
+
+CREATE TABLE IF NOT EXISTS public.roles
+(
+    id serial NOT NULL,
+    name character varying(30) unique,
+    date_created date,
+    date_updated date DEFAULT current_date,
+    PRIMARY KEY (id)
+);
+
+COMMENT ON TABLE public.roles
+    IS 'Employee roles to referrence';
+   
+CREATE TABLE IF NOT EXISTS public.callbacks 
+(
+    id serial NOT NULL,
+    name character varying(30),
+    contact_number numeric(20),
+    email text,
+    date_created date,
+    date_updated date DEFAULT current_date,
+    PRIMARY KEY (id)
+);
+
+COMMENT ON TABLE public.callbacks
+    IS 'Table to store callback requests';
+
+CREATE TABLE IF NOT EXISTS public.users
+(
+    id serial NOT NULL,
+    name character varying(30),
+    contact_number numeric(20, 0),
+    employee_id character varying(30) unique,
+    gender_id integer,
+    password text,
+    date_created date,
+    date_updated date DEFAULT current_date,
+    role_id integer,
+    PRIMARY KEY (id)
+);
+
+COMMENT ON TABLE public.users
+    IS 'table listing all employee details';
+
+
+ALTER TABLE public.abusers
+    ADD FOREIGN KEY (gender_id)
+    REFERENCES public.gender (id)
+    NOT VALID;
+
+
+ALTER TABLE public.case_activities
+    ADD FOREIGN KEY (user_id)
+    REFERENCES public.users (id)
+    NOT VALID;
+
+
+ALTER TABLE public.cases
+    ADD FOREIGN KEY (abuse_id)
+    REFERENCES public.abuses (id)
+    NOT VALID;
+
+
+ALTER TABLE public.cases
+    ADD FOREIGN KEY (abuser_id)
+    REFERENCES public.abusers (id)
+    NOT VALID;
+
+
+ALTER TABLE public.clients
+    ADD FOREIGN KEY (gender_id)
+    REFERENCES public.gender (id)
+    NOT VALID;
+
+
+ALTER TABLE public.clients
+    ADD FOREIGN KEY (marital_status_id)
+    REFERENCES public.marital_status (id)
+    NOT VALID;
+
+
+ALTER TABLE public.clients
+    ADD FOREIGN KEY (race_id)
+    REFERENCES public.race (id)
+    NOT VALID;
+
+
+ALTER TABLE public.referrals
+    ADD FOREIGN KEY (abuser_id)
+    REFERENCES public.abusers (id)
+    NOT VALID;
+
+
+ALTER TABLE public.referrals
+    ADD FOREIGN KEY (dependant_id)
+    REFERENCES public.dependants (id)
+    NOT VALID;
+
+
+ALTER TABLE public.users
+    ADD FOREIGN KEY (gender_id)
+    REFERENCES public.gender (id)
+    NOT VALID;
+
+
+ALTER TABLE public.users
+    ADD FOREIGN KEY (role_id)
+    REFERENCES public.roles (id)
+    NOT VALID;
+	
+
+alter table public.referring_orginizations
+add constraint constraint_name unique (touching_nations_id);
+
+ALTER TABLE public.referrals 
+    ADD FOREIGN KEY (referring_org_touching_nations_id)
+    REFERENCES public.referring_orginizations (touching_nations_id)
+    NOT VALID;
+   
+end;

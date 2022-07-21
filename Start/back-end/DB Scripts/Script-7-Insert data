@@ -1,0 +1,115 @@
+--Insert types of abuse
+select * from public.abuses;
+
+
+insert into abuses (type_of, date_created, date_updated)
+values ('Physical', current_date, current_date);
+
+insert into abuses (type_of, date_created, date_updated)
+values ('Sexual', current_date, current_date);
+
+insert into abuses (type_of, date_created, date_updated)
+values ('Emotional', current_date, current_date);
+
+insert into abuses (type_of, date_created, date_updated)
+values ('Verbal', current_date, current_date);
+
+insert into abuses (type_of, date_created)
+values ('Other', current_date);
+
+
+--insert roles into table 
+
+select * from roles;
+
+insert into roles (name, date_created, date_updated)
+values('Manager', current_date, current_date);
+
+insert into roles (name, date_created, date_updated)
+values('Social Worker', current_date, current_date);
+
+insert into roles (name, date_created, date_updated)
+values('Auxiliary Social Worker', current_date, current_date);
+
+
+--insert into races table
+select * from races;
+
+
+insert into races (name, date_created)
+values('Black', current_date);
+
+insert into races (name, date_created)
+values('Coloured', current_date);
+
+insert into races (name, date_created)
+values('White', current_date);
+
+insert into races (name, date_created)
+values('Indian', current_date);
+
+insert into races (name, date_created)
+values('Asian', current_date);
+
+--insert into marital_status 
+
+select * from marital_status;
+
+insert into marital_status (name, date_created, date_updated)
+values('Single', current_date, current_date);
+
+insert into marital_status (name, date_created, date_updated)
+values('Married', current_date, current_date);
+
+insert into marital_status (name, date_created, date_updated)
+values('Civil Union', current_date, current_date);
+
+insert into marital_status (name, date_created, date_updated)
+values('Divorced', current_date, current_date);
+
+ALTER TABLE public.case_activities 
+    ADD FOREIGN KEY (case_id)
+    REFERENCES public.cases (case_number)
+    NOT VALID;
+   
+   alter table clients
+   add unique (client_id);
+   
+   ALTER TABLE public.cases
+    ADD FOREIGN KEY (client_id)
+    REFERENCES public.clients (client_id)
+    NOT VALID;
+
+insert into marital_status (name, date_created, date_updated)
+values('Widowed', current_date, current_date);
+
+--insert into gender 
+select * from gender;
+
+insert into gender (name, date_created,date_updated,abbreviation)
+values ('Female', current_date, current_date, 'F');
+
+insert into gender (name, date_created,date_updated,abbreviation)
+values ('Male', current_date, current_date, 'M');
+
+insert into gender (name, date_created,date_updated,abbreviation)
+values ('Transexual', current_date, current_date, 'Trans');
+
+insert into gender (name, date_created, date_updated,abbreviation)
+values('Intersex', current_date, current_date, 'Inter');
+
+insert into gender (name, date_created, date_updated, abbreviation)
+values ('Non-conforming', current_date, current_date, 'NC');
+
+ALTER TABLE public.case_activities 
+    ADD FOREIGN KEY (case_id)
+    REFERENCES public.cases (case_number)
+    NOT VALID;
+   
+alter table clients
+   add unique (client_id);
+   
+ALTER TABLE public.cases
+    ADD FOREIGN KEY (client_id)
+    REFERENCES public.clients (client_id)
+    NOT VALID;

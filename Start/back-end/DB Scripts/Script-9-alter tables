@@ -1,0 +1,168 @@
+select * from abusers;
+
+alter table abusers 
+add column date_updated date default current_date;
+
+select * from clients;
+
+alter table clients 
+rename number_of_dependents to number_of_dependants;
+
+alter table clients 
+alter column government_id type varchar;
+
+select * from roles;
+
+insert into roles (name, date_created)
+values('Funder', current_date);
+
+insert into roles 
+
+alter table users 
+add column authorized numeric (1);
+
+select * from users ;
+
+update users
+set  authorized=1  where name='Super Admin';
+
+delete from users 
+where id = 5;
+
+alter table referrals 
+add column other text;
+
+CREATE TABLE IF NOT EXISTS public.case_type
+(
+    id serial NOT NULL,
+    name character varying(30) unique,
+    date_created date,
+    date_updated date DEFAULT current_date,
+    PRIMARY KEY (id)
+);
+
+COMMENT ON TABLE public.case_type
+    IS 'table listing different case types to reference';
+   
+select * from public.case_type;
+
+insert into public.case_type (name, date_created)
+values ('GBV Client', current_date);
+
+insert into public.case_type (name, date_created)
+values ('Callback', current_date);
+
+insert into public.case_type (name, date_created)
+values ('Referring Organization', current_date);
+
+alter table cases
+add column case_type_id numeric (2);
+
+alter table cases
+alter column case_type_id type integer;
+
+select * from cases;
+
+alter table cases
+add foreign key (case_type_id)
+references public.case_type (id)
+not valid;
+
+CREATE TABLE IF NOT EXISTS public.case_status
+(
+    id serial NOT NULL,
+    name character varying(30) unique,
+    date_created date,
+    date_updated date DEFAULT current_date,
+    PRIMARY KEY (id)
+);
+
+COMMENT ON TABLE public.case_status
+    IS 'table listing different case states to reference';
+   
+select * from case_status ;
+
+insert into case_status (name, date_created)
+values ('Unclaimed', current_date);
+
+insert into case_status (name, date_created)
+values ('Claimed', current_date);
+
+insert into case_status (name, date_created)
+values ('In progress', current_date);
+
+insert into case_status (name, date_created)
+values ('Completed', current_date);
+
+alter table cases
+add foreign key (case_status_id)
+references public.case_status (id)
+not valid;
+
+alter table cases
+add column case_status_id integer;
+
+select * from case_type ;
+
+SELECT case_number, case_type.name as case_type, gender.name as gender, languages, races.name as ethnicity, education_level,type_of as abuse,
+relationship_to_client, details_of_incident 
+FROM clients 
+INNER JOIN gender ON gender_id=gender.id 
+INNER JOIN races ON race_id=races.id 
+INNER JOIN cases ON clients.client_id=cases.client_id 
+INNER JOIN case_type ON case_type_id=case_type.id 
+INNER JOIN abusers ON abuser_id=abusers.id 
+INNER JOIN abuses ON abuse_id=abuses.id;
+
+select * from clients;
+select * from case_status;
+
+alter table referrals 
+drop column organization_type;
+
+drop table dependants ;
+
+select * from referrals ;
+select * from referring_organizations;
+
+alter table referrals 
+add column title_of_referrer text;
+
+alter table referring_orginizations 
+add column authorized_person_contact numeric(20);
+
+alter table referring_orginizations 
+rename to referring_organizations;
+
+alter table referring_organizations 
+rename column orginization_name
+to organization_name;
+
+alter table referrals 
+ alter column ongoing_involvement type text,
+ alter column client_aware_of_referral type text,
+ alter column client_willing_to_travel type text;
+ 
+alter table referrals 
+add foreign key (client_id)
+references clients (client_id);
+
+alter table referrals
+add foreign key (case_number)
+references cases (case_number);
+
+alter table referring_organizations 
+rename column orginization_type
+to organization_type;
+
+CREATE TABLE IF NOT EXISTS public.callbacks
+(
+    id serial NOT NULL,
+    name character varying(50),
+    email varchar(120),
+    contact numeric (30),
+    date_created date,
+    date_updated date DEFAULT current_date,
+    PRIMARY KEY (id)
+);
+
