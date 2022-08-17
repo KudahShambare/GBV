@@ -6,18 +6,19 @@ import NavBar from "../Components/NavBar";
 import TrackYourCase from "../Components/TrackYourCase";
 
 const GBVVictims = () => {
-    return (
+  return (
     <>
-            <NavBar />
-            <br/>
-            <CarouselTop />
-            <br/>
-            <ContactUsSection />
-            <br/>
-            <TrackYourCase />
-            <br/>
-            <CarouselBottom />
+      <NavBar />
+      <br />
+      <CarouselTop />
+      <br />
+      <ContactUsSection />
+      <br />
+      <TrackYourCase />
+      <br />
+      <CarouselBottom />
     </>
-    )};
+  );
+};
 
 export default GBVVictims;

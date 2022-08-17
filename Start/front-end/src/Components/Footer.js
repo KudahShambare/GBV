@@ -3,7 +3,6 @@ import Col from "react-bootstrap/esm/Col";
 import Container from "react-bootstrap/esm/Container";
 import Row from "react-bootstrap/esm/Row";
 import Logo from "../Components/Logo";
-import { Timeline } from "react-twitter-widgets";
 
 function Footer() {
   return (
@@ -28,13 +27,24 @@ function Footer() {
               </li>
               <li style={{ color: "white" }}>30 Civic Road</li>
               <li style={{ color: "white" }}>Elsies River</li>
-            
+
               <li style={{ color: "white" }}>7493, South Africa</li>
               <li>
-              <li>
-                {" "}
-               <a href="https://goo.gl/maps/4y4VrcCpHb5QSVG76" target="_blank"> <img src="../Components/Map.png" height="100" width="200" alt="map view"/>{" "} </a> 
-              </li>
+                <li>
+                  {" "}
+                  <a
+                    href="https://goo.gl/maps/4y4VrcCpHb5QSVG76"
+                    target="_blank"
+                  >
+                    {" "}
+                    <img
+                      src="../Components/Map.png"
+                      height="100"
+                      width="200"
+                      alt="map view"
+                    />{" "}
+                  </a>
+                </li>
                 <strong style={{ color: "white" }}>Phone:</strong>{" "}
                 <a
                   href="#Number"

@@ -34,17 +34,15 @@ const AvatarLabel = styled.div`
   display: flex;
   align-items: center;
 `;
-const employeeID = {
+const employeeID = {};
 
-}
-
-function ImageAvatars(){
-    <AvatarContainer>
-      <Avatar
-        alt={employeeID}
-        src="https://images.pexels.com/photos/4016173/pexels-photo-4016173.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-      />
-	</AvatarContainer>
+function ImageAvatars() {
+  <AvatarContainer>
+    <Avatar
+      alt={employeeID}
+      src="https://images.pexels.com/photos/4016173/pexels-photo-4016173.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+    />
+  </AvatarContainer>;
 }
 function AvatarWithText() {
   return (
@@ -61,62 +59,72 @@ function AvatarWithText() {
   );
 }
 
-
 const SocialWorkerDashboardNavBar = () => {
- const logout = () => {
+  const logout = () => {
     window.localStorage.clear();
-    window.location.href ="/login";
-	}
-	const goToMain = () => {
-		window.location.href ="/social-worker-dashboard";
-	}
-	const theme = useTheme();
-	return (
-		<>
-			<Navbar
-				collapseOnSelect
-				expand="lg"
-				bg="dark"
-				variant="dark"
-				sticky="top"
-			>
-				<Container>
-					<Navbar.Brand href="/social-worker-dashboard">
-						{<Logo />}
-					</Navbar.Brand>
-					<Navbar.Toggle aria-controls="responsive-navbar-nav" />
-					<Navbar.Collapse id="responsive-navbar-nav">
-						<Nav id="nav" style={{color:"white"}}>
-							<Nav.Item>
-								<Nav.Link href="/social-worker-dashboard" eventKey="/social-worker-dashboard">
-									Live Cases
-								</Nav.Link>
-                            </Nav.Item>
-                            Welcome to the Social Workers Dashboard                          
-							<Nav.Item className="justify-content-end">
-								<Nav.Link href="/social-workers-signin" onClick={logout} eventKey="/social-workers-signin">
-									Logout
-								</Nav.Link>
-							</Nav.Item>
-							<Nav.Item className="justify-content-end">
-								<Nav.Link href="/social-worker-dashboard" onClick={goToMain} eventKey="/social-worker-dashboard">
-									{
-										<StylesProvider injectFirst>
-      										<ThemeProvider theme={theme}>
-        										<Content>
-          												<AvatarWithText />
-												</Content>
-	  										</ThemeProvider>
-										</StylesProvider>
-									}
-								</Nav.Link>
-							</Nav.Item>
-						</Nav>
-					</Navbar.Collapse>
-				</Container>
-			</Navbar>
-		</>
-	);
+    window.location.href = "/login";
+  };
+  const goToMain = () => {
+    window.location.href = "/social-worker-dashboard";
+  };
+  const theme = useTheme();
+  return (
+    <>
+      <Navbar
+        collapseOnSelect
+        expand="lg"
+        bg="dark"
+        variant="dark"
+        sticky="top"
+      >
+        <Container>
+          <Navbar.Brand href="/social-worker-dashboard">
+            {<Logo />}
+          </Navbar.Brand>
+          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+          <Navbar.Collapse id="responsive-navbar-nav">
+            <Nav id="nav" style={{ color: "white" }}>
+              <Nav.Item>
+                <Nav.Link
+                  href="/social-worker-dashboard"
+                  eventKey="/social-worker-dashboard"
+                >
+                  Live Cases
+                </Nav.Link>
+              </Nav.Item>
+              Welcome to the Social Workers Dashboard
+              <Nav.Item className="justify-content-end">
+                <Nav.Link
+                  href="/social-workers-signin"
+                  onClick={logout}
+                  eventKey="/social-workers-signin"
+                >
+                  Logout
+                </Nav.Link>
+              </Nav.Item>
+              <Nav.Item className="justify-content-end">
+                <Nav.Link
+                  href="/social-worker-dashboard"
+                  onClick={goToMain}
+                  eventKey="/social-worker-dashboard"
+                >
+                  {
+                    <StylesProvider injectFirst>
+                      <ThemeProvider theme={theme}>
+                        <Content>
+                          <AvatarWithText />
+                        </Content>
+                      </ThemeProvider>
+                    </StylesProvider>
+                  }
+                </Nav.Link>
+              </Nav.Item>
+            </Nav>
+          </Navbar.Collapse>
+        </Container>
+      </Navbar>
+    </>
+  );
 };
 
 export default SocialWorkerDashboardNavBar;
