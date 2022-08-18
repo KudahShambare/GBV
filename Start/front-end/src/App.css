@@ -4,3 +4,10 @@
   background-size: cover;
   min-height: 100vh;
 }
+
+/*Footer*/
+
+footer{
+  background-color: black;
+  height: 50vh;
+}

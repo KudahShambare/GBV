@@ -1,3 +1,9 @@
 import React from "react";
 
-CONS
+const NavBar=()=>{
+    return (
+<>
+</>
+    )
+}
+export default NavBar;
