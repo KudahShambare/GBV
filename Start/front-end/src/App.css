@@ -4,7 +4,17 @@
   background-size: cover;
   min-height: 100vh;
 }
-
+/*Hpme Page*/
+#services{
+  background-color: rgb(150, 196, 236);
+  width:80%;
+  display:block;
+  margin-left: auto;
+  margin-right: auto;
+  height:auto;
+  text-align: center;
+  padding: 5%;
+}
 /*Footer*/
 
 footer{
