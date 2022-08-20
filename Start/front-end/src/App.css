@@ -20,4 +20,9 @@
 footer{
   background-color: black;
   height: 50vh;
+  color: white;
+}
+#footer-contents{
+  display: flex;
+  flex-direction: column;
 }
