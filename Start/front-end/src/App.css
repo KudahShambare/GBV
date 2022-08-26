@@ -15,6 +15,10 @@
   text-align: center;
   padding: 5%;
 }
+/*Quick Help*/
+#emergency{
+  background-color:red;
+}
 /*Footer*/
 
 footer{

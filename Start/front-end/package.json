@@ -8,7 +8,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    
+    "start":"npm start"
   },
   "keywords": [],
   "author": "",
