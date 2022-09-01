@@ -3,13 +3,20 @@ import React from "react";
 const QuickHelp=()=>{
     return(
         <div>
+<section id="quick-help">
+<p>You can get quick help from our social workers during our office times stated below </p>
+<ul>
+<li>Mon-Friday: times here</li>
+<li>Monday-Friday: times here</li>
+<li>Saturdays: times here</li>
+<li>Public Holidays: times here</li>
+</ul>
 <section>
-<p>You can report your case to our partners during </p>
-<button>Call The Police</button>
+<button>WhatsApp</button>
+<button>Email</button>
 </section>
-<section>
-<button id="emergency">Emergency</button>
 </section>
+
         </div>
     )
 }

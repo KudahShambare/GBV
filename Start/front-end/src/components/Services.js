@@ -11,7 +11,7 @@ const Services = () => {
         of what is gender based violence and its state in Cape tOWN A WELL AS
         THE EFforts and measures put in place by the organization to fight GBV{" "}
       </p>
-      <h2>Parners</h2>
+      <h2>Our Partners</h2>
       <ul>
         <li>Police</li>
         <li>List all other partners</li>

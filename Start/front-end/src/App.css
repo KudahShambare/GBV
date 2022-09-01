@@ -1,3 +1,15 @@
+
+/*Nav*/
+nav{
+  background-color: black;
+
+}
+.nav-links{
+  color:aliceblue;
+  font-weight: bold;
+  text-decoration: none;
+  
+}
 .pages{
   background-image: url("../src/assets/background.jpg");
   background-repeat: no-repeat;
@@ -16,8 +28,16 @@
   padding: 5%;
 }
 /*Quick Help*/
-#emergency{
-  background-color:red;
+#quick-help{
+  background-color: rgb(150,196,236,0.7);
+  margin-top: 5%;
+}
+
+/*Demos*/
+.demos{
+  background-color: rgb(150,196,236,0.4);
+  color:white;
+  margin-top: 5%;
 }
 /*Footer*/
 
