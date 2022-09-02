@@ -5,11 +5,11 @@ const Footer=()=>{
         <footer>
         <div id="footer-contents">
         <div id="our-contact">
-            <h2> OurContact </h2>
+            <h2> Contact Us </h2>
 
 </div>
 <div id="our-social">
-    <h2>Our Social</h2>
+    <h2>Social Updates</h2>
 
 </div>
         </div>

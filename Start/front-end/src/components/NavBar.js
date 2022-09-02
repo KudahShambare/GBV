@@ -6,12 +6,12 @@ const NavBar=()=>{
 <>
 <nav>
 <Link to="/"><img src="../assets/Touchingnationslogo.png" alt="Oooops"/>  </Link>
-<Link to="/" className="nav-links"><span > Reffering Organisations</span></Link>
+<Link to="/reffering-organisations" className="nav-links"><span > Reffering Organisations</span></Link>
 
-<Link to="/" className="nav-links"
+<Link to="/faq" className="nav-links"
 ><span > FAQ</span></Link>
-<Link to="/" className="nav-links"><span > Staff Members</span></Link>
-<Link to="/" className="nav-links"><span > GBV Victims</span></Link>
+<Link to="/staff" className="nav-links"><span > Staff Members</span></Link>
+<Link to="/Victims" className="nav-links"><span > GBV Victims</span></Link>
 </nav>
 </>
 
