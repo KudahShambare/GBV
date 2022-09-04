@@ -39,6 +39,10 @@ nav{
   color:white;
   margin-top: 5%;
 }
+/*Victims*/
+#victim-add-info{
+  background-color: rgb(150,196,236,0.7);
+}
 /*Footer*/
 
 footer{
