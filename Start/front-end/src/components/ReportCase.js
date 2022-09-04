@@ -11,9 +11,15 @@ const ReportCase=()=>{
 <form>
 <input type="text" name="first-name" placeholder="First Name" required/>
 <input type="text" name="last-name" placeholder="Last Name" required/>
-<input type="text" name="age" placeholder="Age" required/>
-<input type="text" name="gender" placeholder="Gender" required/>
-<input type="text" name="phone-number" placeholder="10  Digit Phone Number" required/>
+<input type="text" name="age" placeholder="Age" pattern="[0-9]{2}" required/>
+<section id="report-case-gender">
+<label>Gender</label><br/>
+<span>Female</span> <input type="radio" name="gender" value="female"required/>
+<span>Male</span> <input type="radio" name="gender" value="male"required/>
+</section>
+
+
+<input type="tel" name="phone-number" placeholder="10 Digit Phone Number" pattern="[0-9]{10}"  required/>
 <input type="email" name="email" placeholder="Email" required/> <br/>
 <button> Submit </button>
 

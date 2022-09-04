@@ -43,6 +43,10 @@ nav{
 #victim-add-info{
   background-color: rgb(150,196,236,0.7);
 }
+/*report form*/
+#report-case-gender{
+  background-color: white;
+}
 /*Footer*/
 
 footer{
