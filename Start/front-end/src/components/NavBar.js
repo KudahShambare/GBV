@@ -11,7 +11,7 @@ const NavBar=()=>{
 
 	const changeStyle=()=>{
 		if(navClassName==="lower-nav-no-display"){
-			console.log(navClassName);
+			
 
 setNavClassName("lower-nav-display");
 console.log(navClassName);
