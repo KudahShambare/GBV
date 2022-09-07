@@ -41,6 +41,7 @@ nav{
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 100vh;
+  padding-bottom: 5%;
 }
 /*Hpme Page*/
 #services{
@@ -73,9 +74,26 @@ nav{
 #report-case-gender{
   background-color: white;
 }
+
+/*Reffering Organisation*/
+
+.form-ref-org{
+  background-color: rgb(150,196,236);
+  text-align: center;
+  margin-top: 5%;
+  width:80%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 5%;
+
+}
+
 /*Footer*/
 
 footer{
+  text-align: center;
+  padding-top: 5%;
   background-color: black;
   height: 50vh;
   color: white;
