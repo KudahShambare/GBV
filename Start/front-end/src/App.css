@@ -4,6 +4,32 @@ nav{
   background-color: black;
 
 }
+#top-nav{
+  display: flex;
+  flex-direction: row;
+}
+#hamburger{
+  width:10vh;
+  height: 10vh;
+  display: block;
+  margin-left: auto;
+  margin-right: 5%;
+  margin-top: auto;
+  margin-bottom: auto;
+  
+
+}
+.lower-nav-no-display{
+  display: none;
+}
+.lower-nav-display{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+#nav-logo{
+  width:40vw;
+}
 .nav-links{
   color:aliceblue;
   font-weight: bold;
