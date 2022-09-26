@@ -36,6 +36,12 @@ nav{
   text-decoration: none;
   
 }
+/*Headings*/
+h2{
+  text-align: center;
+  padding-top: 5%;
+}
+/*Pages*/
 .pages{
   background-image: url("../src/assets/background.jpg");
   background-repeat: no-repeat;
@@ -65,15 +71,26 @@ nav{
   background-color: rgb(150,196,236,0.4);
   color:white;
   margin-top: 5%;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  width: 80%;
 }
+
 /*Victims*/
 #victim-add-info{
   background-color: rgb(150,196,236,0.7);
 }
-/*report form*/
-#report-case-gender{
+#report{
   background-color: white;
+  border: bold solid;
+  width: 80%;
+  display:block;
+  margin-left: auto;
+  margin-right: auto;
 }
+/*report form*/
+
 
 /*Reffering Organisation*/
 
@@ -88,7 +105,18 @@ nav{
   padding: 5%;
 
 }
-
+.form-ref-org  input{
+margin-bottom: 2%;
+}
+.form-ref-org button{
+  border: none;
+}
+/*FAQ*/
+.faq-answer{
+  background-color: rgb(150,196,236,0.4);
+  padding: 5%;
+  color:white;
+}
 /*Footer*/
 
 footer{
@@ -101,4 +129,7 @@ footer{
 #footer-contents{
   display: flex;
   flex-direction: column;
+}
+#cyf{
+  width:20vw;
 }

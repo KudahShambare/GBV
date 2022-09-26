@@ -1,6 +1,7 @@
 import React from "react";
 
 import SocialIcons from "../components/SocialIcons";
+import cyf from "../assets/cyf.png";
 
 const Footer=()=>{
     return(
@@ -15,7 +16,8 @@ const Footer=()=>{
 
 </div>
         </div>
-<span > &copy; Copyrights Touching Nations 2022</span>
+<span > &copy; Copyrights Touching Nations 2022</span><br/>
+<span> Powered by  <a href="https://www.codeyourfuture.io/" target="_black">   <img src={cyf} alt="oooops" id="cyf"/> </a> </span>
         </footer>
     )
 }

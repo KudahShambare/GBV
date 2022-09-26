@@ -1,14 +1,27 @@
-import React from "react";
+import React, { useState,useEffect} from "react";
+
+import noGBV from "../assets/NoGBV.png";
+import violence from "../assets/violence.jpeg";
+import stop from "../assets/stop.jpeg";
+import speakout from "../assets/speakout.jpeg";
 
 const ReportCase=()=>{
+
+	const [currentImg,setCurrentImg]=useState(noGBV);
+
+
+	const images=[noGBV,violence,stop,speakout];
+
+	
 	return(
 		<>
 <div>
-<section>
+<section id="report">
 <h2> Report Case </h2>
+<img src={currentImg} alt="ooops" />
 </section>
 <section>
-<form>
+<form >
 <input type="text" name="first-name" placeholder="First Name" required/>
 <input type="text" name="last-name" placeholder="Last Name" required/>
 <input type="text" name="age" placeholder="Age" pattern="[0-9]{2}" required/>
