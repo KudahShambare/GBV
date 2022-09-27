@@ -18,13 +18,13 @@ const ReportCase=()=>{
 <div>
 <section id="report">
 <h2> Report Case </h2>
-<img src={currentImg} alt="ooops" />
+<img src={currentImg} alt="ooops" id="report-img"/>
 </section>
 <section>
-<form >
-<input type="text" name="first-name" placeholder="First Name" required/>
-<input type="text" name="last-name" placeholder="Last Name" required/>
-<input type="text" name="age" placeholder="Age" pattern="[0-9]{2}" required/>
+<form id="report-form">
+<input className="report-input" type="text" name="first-name" placeholder="First Name" required/>
+<input className="report-input" type="text" name="last-name" placeholder="Last Name" required/>
+<input className="report-input" type="text" name="age" placeholder="Age" pattern="[0-9]{2}" required/>
 <section id="report-case-gender">
 <label>Gender</label><br/>
 <span>Female</span> <input type="radio" name="gender" value="female"required/>
@@ -32,9 +32,9 @@ const ReportCase=()=>{
 </section>
 
 
-<input type="tel" name="phone-number" placeholder="10 Digit Phone Number" pattern="[0-9]{10}"  required/>
-<input type="email" name="email" placeholder="Email" required/> <br/>
-<button> Submit </button>
+<input className="report-input" type="tel" name="phone-number" placeholder="10 Digit Phone Number" pattern="[0-9]{10}"  required/>
+<input className="report-input" type="email" name="email" placeholder="Email" required/> <br/>
+<button className="form-buttons"> Submit </button>
 
 </form>
 

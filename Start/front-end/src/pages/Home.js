@@ -11,7 +11,7 @@ const Home=()=>{
     return(
       <>
       <NavBar/>
-        <div className="pages">
+        <div className="pages" id="home">
         <Emergency/>
 <Services/>
 <QuickHelp/>

@@ -12,7 +12,7 @@ const RegisterRefOrg=()=>{
 <input type="text" placeholder="Organisation Rep" required/>
 <input type="email" placeholder="Rep Email" required />
 <input type="text" placeholder="Rep Phone" required/> <br/>
-<button> Register </button>
+<button className="form-buttons"> Register </button>
 
 
 </form>

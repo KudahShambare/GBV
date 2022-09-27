@@ -13,7 +13,7 @@ const LogInRefOrg =()=>{
 <input type="text" placeholder="Organisation Rep" required/>
 <input type="email" placeholder="Rep Email" required />
 <input type="text" placeholder="Rep Phone" required/> <br/>
-<button> Sign In </button>
+<button className="form-buttons"> Sign In </button>
 </form>
 </div>
 		)

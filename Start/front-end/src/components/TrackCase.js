@@ -4,7 +4,7 @@ const TrackCase = () => {
   return (
     <form>
       <input type="text" name="track" />
-      <button>Track</button>
+      <button className="form-buttons">Track</button>
     </form>
   );
 }

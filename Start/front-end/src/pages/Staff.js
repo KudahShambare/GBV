@@ -10,18 +10,23 @@ const Staff=()=>{
 <NavBar/>
 <div className="pages">  
 
-<Link to="/">
-<button>  Administrator </button>
+<section id="staff-container">
+<Link to="/" className="staff-links">
+<button >  Administrator </button>
 </Link>
 
 
-<Link to="/">
-<button>  Auxillary Social Worker </button>
-</Link>
-<Link to="/">
-<button>  Social Worker </button>
+<Link to="/" className="staff-links">
+<button >  Social Worker </button>
 </Link>
 
+<Link to="/" className="staff-links">
+<button >  Auxillary Social Worker </button>
+</Link>
+
+
+
+</section>
 
  </div>
 <Footer/>

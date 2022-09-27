@@ -7,7 +7,7 @@ const SocialWorkerDemo=()=>{
 
 <p> A brief explanation about the social workers </p>
 
-<button> Learn More  >>> </button>
+<button className="learn-more"> Learn More  >>> </button>
 
 </div>
 		)

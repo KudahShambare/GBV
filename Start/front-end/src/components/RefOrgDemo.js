@@ -7,7 +7,7 @@ const RefOrgDemo=()=>{
 
 <p>  Give a brief explanation of what are refering Organisations</p>
 
-<button> Learn More >>> </button>
+<button className="learn-more"> Learn More >>> </button>
 
 
 
