@@ -37,9 +37,10 @@ nav{
   
 }
 /*Headings*/
-h2{
+h2, h3{
   text-align: center;
   padding-top: 5%;
+  font-weight: bolder;
 }
 /*Pages*/
 .pages{
@@ -67,6 +68,15 @@ h2{
 #quick-help{
   background-color: rgb(150,196,236,0.7);
   margin-top: 5%;
+  padding: 5%;
+}
+#quick-help-buttons{
+  display: flex;
+  flex-direction: row;
+  background-color: black;
+  justify-content: center;
+  column-gap: 5%;
+  padding: 5%;
 }
 
 /*Demos*/
@@ -157,6 +167,10 @@ buuton{
   margin-right: auto;
   margin-bottom: 5%;
 }
+#emergency > a{
+  text-decoration: none;
+  color: white;
+}
 .learn-more{
   display: block;
   margin-right: auto;
@@ -180,6 +194,13 @@ buuton{
   
 }
 /*FAQ*/
+#faq-container{
+  padding-top: 10%;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  width: 80%;
+}
 .faq-answer{
   background-color: rgb(150,196,236,0.4);
   padding: 5%;
@@ -191,13 +212,49 @@ footer{
   text-align: center;
   padding-top: 5%;
   background-color: black;
-  height: 50vh;
   color: white;
 }
 #footer-contents{
   display: flex;
   flex-direction: column;
+
+}
+#footer-socials{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  column-gap: 5%;
+  padding-top: 5%;
 }
 #cyf{
   width:20vw;
+}
+
+/*Tablet View*/
+
+@media screen and (min-width: 570px){
+
+  #hamburger{
+    display:none;
+  }
+  .lower-nav-no-display{
+  display: flex;
+  flex-direction: row;
+  align-content: space-between;
+  column-gap: 3%;
+  width: 80%;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 0;
+
+
+}
+
+.nav-links{
+   background-color: blue;
+  padding: 2%;
+  margin-bottom: 5%;
+  margin-top: 0;
+  text-align: center;
+}
 }

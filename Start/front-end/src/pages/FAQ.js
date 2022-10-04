@@ -11,8 +11,8 @@ const FAQ=()=>{
 		<>
 		<NavBar/>
 <div className="pages">
-
-        <Accordion>
+<section id="faq-container">
+        <Accordion >
             <AccordionItem>
                 <AccordionItemHeading>
                     <AccordionItemButton>
@@ -104,6 +104,9 @@ const FAQ=()=>{
             </AccordionItem>
         </Accordion>
  
+
+</section>
+
 </div>
 <Footer/>
 </>

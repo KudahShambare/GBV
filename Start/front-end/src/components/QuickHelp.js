@@ -1,4 +1,5 @@
 import React from "react";
+import { SocialIcon } from 'react-social-icons';
 
 const QuickHelp=()=>{
     return(
@@ -11,9 +12,10 @@ const QuickHelp=()=>{
 <li>Saturdays: times here</li>
 <li>Public Holidays: times here</li>
 </ul>
-<section>
-<button>WhatsApp</button>
-<button>Email</button>
+<section id="quick-help-buttons">
+<SocialIcon  network="whatsapp" url="https://www.google.com" target="_blank"/>
+<SocialIcon network="email" url="https://www.facebook.com/wearetouchingnations/" target="_blank"/>
+
 </section>
 </section>
 

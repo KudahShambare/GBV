@@ -4,7 +4,7 @@ import { SocialIcon } from 'react-social-icons';
 const SocialIcons=()=>{
 	return(
 
-<div>
+<div id="footer-socials">
 
 
 <SocialIcon network="twitter" url="https://twitter.com/TouchingNations" target="_blank"/>
