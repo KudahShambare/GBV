@@ -31,10 +31,15 @@ nav{
   width:40vw;
 }
 .nav-links{
-  color:aliceblue;
+  color:gold;
+  border:white solid;
   font-weight: bold;
   text-decoration: none;
-  
+  text-align: center;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 5%;
 }
 /*Headings*/
 h2, h3{
@@ -234,27 +239,43 @@ footer{
 
 @media screen and (min-width: 570px){
 
+  nav{
+    display: flex;
+    flex-direction: row;
+    height: 45vh;
+  }
+
   #hamburger{
     display:none;
   }
   .lower-nav-no-display{
   display: flex;
   flex-direction: row;
-  align-content: space-between;
-  column-gap: 3%;
+
   width: 80%;
   margin-right: auto;
   margin-left: auto;
   margin-top: 0;
 
 
+
 }
 
 .nav-links{
-   background-color: blue;
+
   padding: 2%;
   margin-bottom: 5%;
   margin-top: 0;
   text-align: center;
+  border:none;
+  margin-top: 12%;
+  height: 15vh;
+  font-size: small;
 }
+
+#nav-logo{
+  width:20vw;
+  height: auto;
+}
+
 }
