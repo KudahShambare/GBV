@@ -30,7 +30,7 @@ const NavBar=()=>{
 <section  className={navClassName}>
 <Link to="/Victims" className="nav-links"><span > GBV Victims</span></Link>
 <Link to="/staff" className="nav-links"><span > Staff Members</span></Link>
-<Link to="/reffering-organisations" className="nav-links"><span > Referring Organisations</span></Link>
+<Link to="/referring-organisations" className="nav-links"><span > Referring Organisations</span></Link>
 <Link to="/faq" className="nav-links"><span > Frequently Asked Questions</span></Link>
 </section>
 </nav>

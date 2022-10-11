@@ -20,7 +20,7 @@ function App() {
           <div id="page-body">
  <Switch>
     <Route exact path="/" component={Home} />
-    <Route exact path="/reffering-organisations" component={RefOrgs} />
+    <Route exact path="/referring-organisations" component={RefOrgs} />
     <Route exact path="/staff" component={Staff} />
     <Route exact path="/social-worker" component={SocialWorker} />
     <Route exact path="/administrators" component={Administrators} />

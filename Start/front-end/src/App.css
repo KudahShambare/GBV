@@ -242,7 +242,7 @@ footer{
   nav{
     display: flex;
     flex-direction: row;
-    height: 45vh;
+    height: 25vh;
   }
 
   #hamburger{
@@ -268,14 +268,14 @@ footer{
   margin-top: 0;
   text-align: center;
   border:none;
-  margin-top: 12%;
+  margin-top: 5%;
   height: 15vh;
   font-size: small;
 }
 
 #nav-logo{
   width:20vw;
-  height: auto;
+  height: 25vh;
 }
 
 }

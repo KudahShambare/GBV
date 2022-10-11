@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
 
 const SocialWorkerDemo=()=>{
 	return(
@@ -7,8 +9,10 @@ const SocialWorkerDemo=()=>{
 
 <p> A brief explanation about the social workers </p>
 
-<button className="learn-more"> Learn More  >>> </button>
+<Link to="/social-worker">
 
+<button className="learn-more"> Learn More  >>> </button>
+</Link>
 </div>
 		)
 }
