@@ -8,7 +8,7 @@ import RefOrgs from "./pages/RefOrgs";
 import Staff from "./pages/Staff";
 import Victims from "./pages/Victims";
 import SocialWorker from "./pages/SocialWorker";
-import Auxillery from "./pages/Auxillery";
+import Auxillary from "./pages/Auxillary";
 import Administrators from "./pages/Administrators";
 
 
@@ -24,7 +24,7 @@ function App() {
     <Route exact path="/staff" component={Staff} />
     <Route exact path="/social-worker" component={SocialWorker} />
     <Route exact path="/administrators" component={Administrators} />
-    <Route exact path="/auxillery-social-worker" component={Auxillery} />
+    <Route exact path="/auxillary-social-worker" component={Auxillary} />
     <Route exact path="/faq" component={FAQ} />
     <Route exact path="/victims" component={Victims} />
 

@@ -16,9 +16,7 @@ nav{
   margin-right: 5%;
   margin-top: auto;
   margin-bottom: auto;
-  
-
-}
+  }
 .lower-nav-no-display{
   display: none;
 }
@@ -41,6 +39,7 @@ nav{
   margin-right: auto;
   margin-bottom: 5%;
 }
+/******************************************************************************************************/
 /*Headings*/
 h2, h3{
   text-align: center;
@@ -55,7 +54,8 @@ h2, h3{
   min-height: 100vh;
   padding-bottom: 5%;
 }
-/*Hpme Page*/
+/***************************************************************************************************************/
+/*Home Page*/
 #home{
   padding-top: 5%;
 }
@@ -136,6 +136,7 @@ h2, h3{
   margin-right: auto;
   margin-left: auto;
 }
+/*******************************************************************************************************************/
 
 /*Reffering Organisation*/
 
@@ -156,8 +157,9 @@ margin-bottom: 2%;
 .form-ref-org button{
   border: none;
 }
+/*******************************************************************************************************************/
 /*Buttons*/
-buuton{
+button{
   border: none;
 }
 .form-buttons{
@@ -185,6 +187,7 @@ buuton{
   margin-bottom: 5%; 
 
 }
+/*************************************************************************************************************/
 /*Staff*/
 #staff-container{
   padding-top: 20%;
@@ -195,9 +198,30 @@ buuton{
 .staff-links{
   text-align: center;
   margin-bottom: 10%;
-
-  
 }
+/*Staff forms*/
+.staff-forms{
+  background-color: white;
+ 
+ }
+ .staff-forms > form{
+   display:flex;
+   flex-direction: column;
+   width:80%;
+   margin-left:auto;
+   margin-right: auto;
+
+ }
+ .staff-forms > form > input{
+  margin-bottom: 5%;
+  background-color: black;
+ }
+ .toggle-form{
+  color: blue;
+  font-weight: bold;
+  text-align: center;
+ }
+/*************************************************************************************************************/
 /*FAQ*/
 #faq-container{
   padding-top: 10%;
@@ -211,6 +235,7 @@ buuton{
   padding: 5%;
   color:white;
 }
+/***************************************************************************************************************/ 
 /*Footer*/
 
 footer{
@@ -234,7 +259,7 @@ footer{
 #cyf{
   width:20vw;
 }
-
+/***********************************************************************************************************************/
 /*Tablet View*/
 
 @media screen and (min-width: 570px){

@@ -26,7 +26,7 @@ const Staff=()=>{
 <button >  Social Worker </button>
 </Link>
 
-<Link to="/auxillery-social-worker" className="staff-links">
+<Link to="/auxillary-social-worker" className="staff-links">
 <button >  Auxillary Social Worker </button>
 </Link>
 

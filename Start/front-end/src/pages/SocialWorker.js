@@ -2,10 +2,8 @@ import React from "react";
 
 import Footer from "../components/Footer";
 import NavBar from "../components/NavBar";
-import SocialWorkerSignUp from "../components/SocialWorkerSignUp";
-import SocialWorkerLogin from  "../components/SocialWorkerLogin";
-
-
+import SocialWorkerSignUp from "../components/Staff-Components/SocialWorkerSignUp";
+import SocialWorkerLogIn from  "../components/Staff-Components/SocialWorkerLogIn";
 
 const SocialWorker = ()=>{
 	
@@ -15,7 +13,7 @@ const SocialWorker = ()=>{
 <div className="pages">
 
 <SocialWorkerSignUp/>
-<SocialWorkerLogin/>
+<SocialWorkerLogIn/>
 
 </div>
  <Footer/>
