@@ -9,6 +9,7 @@ import RefOrgSignIn from "./pages/sub-pages/RefOrgSignIn";
 import Staff from "./pages/Staff";
 import Victims from "./pages/Victims";
 import SocialWorker from "./pages/SocialWorker";
+import SocialWorkerLogIn from "./pages/sub-pages/SocialWorkerLogIn";
 import Auxillary from "./pages/Auxillary";
 import Administrators from "./pages/Administrators";
 import AdminLogin from "./pages/sub-pages/AdminLogin";
@@ -32,6 +33,8 @@ function App() {
 
     <Route exact path="/staff" component={Staff} />
     <Route exact path="/social-worker" component={SocialWorker} />
+        <Route exact path="/social-worker-log-in" component={SocialWorkerLogIn} />
+
     <Route exact path="/administrators" component={Administrators} />
         <Route exact path="/administrators-log-in" component={AdminLogin} />
 

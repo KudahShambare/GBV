@@ -12,9 +12,9 @@ const Services = () => {
         THE EFforts and measures put in place by the organization to fight GBV{" "}
       </p>
       <h2>Our Partners</h2>
-      <ul>
+      <ul className="hidden-list">
         <li>Police</li>
-        <li>List all other partners</li>
+        <li className="fix">List all other partners</li>
       </ul>
       
     </div>

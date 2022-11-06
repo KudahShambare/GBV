@@ -1,16 +1,10 @@
 import React, { useState,useEffect} from "react";
 
 import noGBV from "../assets/NoGBV.png";
-import violence from "../assets/violence.jpeg";
-import stop from "../assets/stop.jpeg";
-import speakout from "../assets/speakout.jpeg";
 
 const ReportCase=()=>{
 
-	const [currentImg,setCurrentImg]=useState(noGBV);
-
-
-	const images=[noGBV,violence,stop,speakout];
+;
 
 	
 	return(
@@ -18,7 +12,7 @@ const ReportCase=()=>{
 <div>
 <section id="report">
 <h2> Report Case </h2>
-<img src={currentImg} alt="ooops" id="report-img"/>
+<img src={noGBV} alt="ooops" id="report-img"/>
 </section>
 <section>
 <form id="report-form">
@@ -42,10 +36,10 @@ const ReportCase=()=>{
 
 
 </div>
-<div id="victim-add-info">
+<div id="victim-add-info" >
 <h2> Additional Resources</h2>
 
-<p> Provide Additional Help Resources. Maybe Links to articles with helpful information </p>
+<p className="fix"> Provide Additional Help Resources. Maybe Links to articles with helpful information </p>
 
 </div>
 </>

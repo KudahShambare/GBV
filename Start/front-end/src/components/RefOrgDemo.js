@@ -7,9 +7,9 @@ const RefOrgDemo=()=>{
 <div className="demos">
 <h3> Referring Organisations</h3>
 
-<p>  Give a brief explanation of what are referring Organisations</p>
+<p className="fix">  Give a brief explanation of what are referring Organisations</p>
 
-<Link to="/referring-organisations">
+<Link to="/referring-organisations" className="hidden-links">
 <button className="learn-more"> Learn More >>> </button>
 </Link>
 

@@ -7,9 +7,9 @@ const SocialWorkerDemo=()=>{
 <div className="demos">
 <h3> Social Workers</h3>
 
-<p> A brief explanation about the social workers </p>
+<p className="fix"> A brief explanation about the social workers </p>
 
-<Link to="/social-worker">
+<Link to="/social-worker" className="hidden-links">
 
 <button className="learn-more"> Learn More  >>> </button>
 </Link>

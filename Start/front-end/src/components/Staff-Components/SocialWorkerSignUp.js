@@ -1,4 +1,4 @@
-import React from "react";
+import { Link } from "react-router-dom";
 
 const SocialWorkerSignUp = ()=>{
 	
@@ -14,8 +14,9 @@ const SocialWorkerSignUp = ()=>{
 		<input type="password" name="social-worker-password" placeholder="password" required />
          <button className="form-buttons"> Sign Up </button>
 
+      <Link to="/social-worker-log-in">
          <span className="toggle-form"> Already Have An Account </span>
-
+</Link>
 
 		</form>
 

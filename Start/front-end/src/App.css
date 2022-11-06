@@ -1,5 +1,5 @@
 .fix{
-  background-color: white;
+  background-color: red;
 }
 /*Nav*/
 nav{
@@ -43,10 +43,11 @@ nav{
 }
 /******************************************************************************************************/
 /*Headings*/
-h2, h3{
+h1,h2, h3{
   text-align: center;
   padding-top: 5%;
   font-weight: bolder;
+  color: white;
 }
 /*Pages*/
 .pages{
@@ -70,6 +71,11 @@ h2, h3{
   height:auto;
   text-align: center;
   padding: 5%;
+}
+/*list*/
+.hidden-list{
+  list-style: none;
+
 }
 /*Quick Help*/
 #quick-help{
@@ -189,6 +195,9 @@ button{
   margin-bottom: 5%; 
 
 }
+.hidden-links{
+  text-decoration: none;
+}
 /*************************************************************************************************************/
 /*Staff*/
 #staff-container{
@@ -197,9 +206,11 @@ button{
   flex-direction: column;
  
 }
-.staff-links{
+.staff-links>button{
   text-align: center;
   margin-bottom: 10%;
+  background-color: green;
+  color:white;  
 }
 /*Staff forms*/
 .staff-forms{
@@ -316,6 +327,13 @@ footer{
 #nav-logo{
   width:20vw;
   height: 25vh;
+}
+/*********************Staff**************/
+#staff-container{
+  
+  flex-direction: row;
+  justify-content: space-around;
+ 
 }
 
 /*Forms*/
