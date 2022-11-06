@@ -1,4 +1,6 @@
-
+.fix{
+  background-color: white;
+}
 /*Nav*/
 nav{
   background-color: black;
@@ -315,5 +317,41 @@ footer{
   width:20vw;
   height: 25vh;
 }
+
+/*Forms*/
+
+.staff-forms > form{
+   
+   width:60%;
+   
+
+ }
+
+
+ footer{
+  padding-bottom: 5%;
+  padding-left: 5%;
+}
+ #footer-contents{
+  flex-direction: row;
+
+ }
+
+}
+/**********************************************************************************************/
+
+@media screen and (min-width: 700px){
+
+  .staff-forms{
+    height: 
+  }
+
+
+  .staff-forms > form{
+   
+   width:40%;
+   
+
+ }
 
 }

@@ -1,4 +1,4 @@
-import React from "react";
+import  { Link } from "react-router-dom";
 
 const AdminSignUp = ()=>{
 	return(
@@ -18,12 +18,13 @@ const AdminSignUp = ()=>{
 <span>Clerk</span> <input type="radio" name="admin-role" value="male"required/>
 </section>
 <button className="form-buttons">Sign Up </button>
- <span className="toggle-form"> Already have an account </span>
 
 
 </form>
 
-
+<Link to="/administrators-log-in">
+ <span className="toggle-form"> Already have an account </span>
+</Link>
 </div>
 		)
 }

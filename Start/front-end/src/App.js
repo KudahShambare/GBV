@@ -5,11 +5,13 @@ import Home from "./pages/Home";
 import NoPageFound from "./pages/NoPageFound";
 import FAQ from "./pages/FAQ";
 import RefOrgs from "./pages/RefOrgs";
+import RefOrgSignIn from "./pages/sub-pages/RefOrgSignIn";
 import Staff from "./pages/Staff";
 import Victims from "./pages/Victims";
 import SocialWorker from "./pages/SocialWorker";
 import Auxillary from "./pages/Auxillary";
 import Administrators from "./pages/Administrators";
+import AdminLogin from "./pages/sub-pages/AdminLogin";
 import Cases from "./pages/sub-pages/Cases";
 import ManagerDashboard from "./pages/sub-pages/ManagerDashboard";
 
@@ -24,10 +26,15 @@ function App() {
  <Switch>
 
     <Route exact path="/" component={Home} />
+
     <Route exact path="/referring-organisations" component={RefOrgs} />
+    <Route exact path="/referring-organisations-sign-in" component={RefOrgSignIn} />
+
     <Route exact path="/staff" component={Staff} />
     <Route exact path="/social-worker" component={SocialWorker} />
     <Route exact path="/administrators" component={Administrators} />
+        <Route exact path="/administrators-log-in" component={AdminLogin} />
+
     <Route exact path="/auxillary-social-worker" component={Auxillary} />
     <Route exact path="/faq" component={FAQ} />
     <Route exact path="/victims" component={Victims} />

@@ -1,4 +1,5 @@
-import React from "react";
+
+import {Link} from "react-router-dom";
 
 const RegisterRefOrg=()=>{
 	return(
@@ -16,6 +17,9 @@ const RegisterRefOrg=()=>{
 
 
 </form>
+<Link to="/referring-organisations-sign-in">
+<span> Already Registered </span>
+</Link>
 </div>
 		)
 }

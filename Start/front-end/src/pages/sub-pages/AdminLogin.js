@@ -1,8 +1,14 @@
-import React from "react";
+
 import { Link } from "react-router-dom";
+import NavBar from "../../components/NavBar";
+import Footer from "../../components/Footer";
+
 
 const AdminLogin = ()=>{
 	return(
+		<>
+		<NavBar/>
+<div className="pages">
 <div className="staff-forms">
 
 <h4> Administrator Log In </h4>
@@ -15,12 +21,15 @@ const AdminLogin = ()=>{
 <Link to="/manager-dashboard">
 <button className="form-buttons" >Log In </button>
 </Link>
-<span className="toggle-form" > Don't have an account </span>
 
 </form>
 
 
 </div>
+
+</div>
+<Footer/>
+</>
 		)
 }
 export default AdminLogin;

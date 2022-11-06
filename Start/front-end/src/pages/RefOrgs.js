@@ -12,10 +12,10 @@ const RefOrgs=()=>{
 <section>
 <h2> Reffering Organisations </h2>
 
-<p> Give a brief explanation of what a reffering organisation is  </p>
+<p className="fix"> Give a brief explanation of what a reffering organisation is  </p>
 </section>
 <RegisterRefOrg/>
-<LogInRefOrg/>
+
 
 </div>
 <Footer/>
