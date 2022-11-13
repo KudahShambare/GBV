@@ -20,7 +20,9 @@ const ReportCase=()=>{
 <input className="report-input" type="text" name="last-name" placeholder="Last Name" required/>
 <input className="report-input" type="text" name="age" placeholder="Age" pattern="[0-9]{2}" required/>
 <section className="staff-radios">
+
 <label>Gender</label><br/>
+
 <span>Female</span> <input type="radio" name="gender" value="female"required/>
 <span>Male</span> <input type="radio" name="gender" value="male"required/>
 </section>

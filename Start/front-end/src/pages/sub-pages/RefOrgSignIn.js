@@ -8,6 +8,7 @@
  		<>
 <NavBar/>
 <div className="pages">
+<section className="blank"> </section>
 <LogInRefOrg/>
 </div>
 <Footer/>

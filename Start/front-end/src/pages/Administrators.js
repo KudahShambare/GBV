@@ -11,6 +11,8 @@ const Administrators = ()=>{
 <NavBar/>
 
 <div className="pages">
+		<section className="blank">  </section>
+
 <AdminSignUp/>
 
 

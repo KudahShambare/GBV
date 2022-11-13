@@ -14,7 +14,7 @@ const ManagerDashboard = ()=>{
 			datasets:[
 			{
 				data:[20,80],
-				backgroundColor:["red","blue"]
+				backgroundColor:["green","yellow"]
 			}
 			]
 		}
@@ -23,7 +23,7 @@ const monthlyReports={
 	datasets:[
 {
 
-data:[1,5,4,2,3,10,15,0,13,5,4,10],
+data:[1,5,4,2,3,10,15,8,13,5,4,10],
 backgroundColor:["red","pink","yellow","green","orange","purple","gold","white","azure","violet","indigo","green"]
 }
 	]
@@ -34,12 +34,21 @@ backgroundColor:["red","pink","yellow","green","orange","purple","gold","white",
            <>
            <NavBar/>
            	<div className="pages">
+           	<section className="blank"> </section>
           <div id="overview">
-         <h1>Project overview</h1>
+          <section>  
+        <h1>Project overview</h1>
          
 <Pie data={data}/>
+           </section>
+ <section>  
 <h2>Monthly Cases Report </h2>
 <Bar data={monthlyReports} />
+
+ </section>
+
+
+
          
 
           </div>

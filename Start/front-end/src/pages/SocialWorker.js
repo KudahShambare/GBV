@@ -10,9 +10,9 @@ const SocialWorker = ()=>{
 <>		
 <NavBar/>
 <div className="pages">
+		<section className="blank">  </section>
 
 <SocialWorkerSignUp/>
-
 
 </div>
  <Footer/>

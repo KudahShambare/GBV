@@ -9,6 +9,8 @@ const AdminLogin = ()=>{
 		<>
 		<NavBar/>
 <div className="pages">
+		<section className="blank">  </section>
+
 <div className="staff-forms">
 
 <h4> Administrator Log In </h4>

@@ -1,6 +1,10 @@
 .fix{
   background-color: red;
 }
+/*Bank*/
+.blank{
+  height: 5vh;
+}
 /*Nav*/
 nav{
   background-color: black;
@@ -48,6 +52,11 @@ h1,h2, h3{
   padding-top: 5%;
   font-weight: bolder;
   color: white;
+}
+h4{
+  text-align: center;
+  font-weight: bolder;
+  color:blue;
 }
 /*Pages*/
 .pages{
@@ -103,8 +112,16 @@ h1,h2, h3{
   width: 80%;
   padding-bottom: 5%;
 }
-
+/*********************************************************************************************************/
 /*Victims*/
+#tracking{
+  background-color: black;
+  text-align: center;
+  padding-bottom: 5%;
+}
+#tracking > input{
+  height: 20vh;
+}
 #victim-add-info{
   background-color: rgb(150,196,236,0.7);
 }
@@ -130,12 +147,12 @@ h1,h2, h3{
 }
 .report-input{
   margin-bottom: 2%;
-  background-color: black;
   text-align: center;
 }
-.report-input::placeholder{
-  color:white;
-  opacity:1;
+label{
+  text-align: center;
+  font-weight: bolder;
+  color: blue;
 }
 /*report image*/
 #report-img{
@@ -214,7 +231,9 @@ button{
 }
 /*Staff forms*/
 .staff-forms{
+  margin-top: 5%;
   background-color: white;
+  padding-bottom: 5%;
  
  }
  .staff-forms > form{
@@ -227,7 +246,7 @@ button{
  }
  .staff-forms > form > input{
   margin-bottom: 5%;
-  background-color: black;
+ 
  }
  .toggle-form{
   color: blue;
@@ -251,15 +270,18 @@ button{
 /****************************************************************************************************************/
 /*Dashboard*/
 #overview{
-  margin-top-top: 10%;
-  background-color: black;
+  margin-top: 10%;
   
   display: block;
   margin-left: auto;
   margin-right: auto;
-  color: gold;
   text-align: center;
- 
+
+}
+#overview>section{
+  background-color: black;
+  margin-top: 5%;
+    color: gold;
 }
 
 /***************************************************************************************************************/ 
@@ -302,18 +324,12 @@ footer{
   .lower-nav-no-display{
   display: flex;
   flex-direction: row;
-
   width: 80%;
   margin-right: auto;
   margin-left: auto;
   margin-top: 0;
-
-
-
 }
-
 .nav-links{
-
   padding: 2%;
   margin-bottom: 5%;
   margin-top: 0;
@@ -323,27 +339,40 @@ footer{
   height: 15vh;
   font-size: small;
 }
-
 #nav-logo{
   width:20vw;
   height: 25vh;
 }
 /*********************Staff**************/
-#staff-container{
-  
+#staff-container{ 
   flex-direction: row;
   justify-content: space-around;
- 
-}
-
-/*Forms*/
-
-.staff-forms > form{
-   
-   width:60%;
-   
-
  }
+/*Forms*/
+.staff-forms {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;   
+   width:60%;
+   padding-top: 3%;
+ }
+ /*********************************************************************************************************/
+/*Victims*/
+#tracking{
+  width:80%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+
+}
+ /*************************Dashboard**********************************************/
+ #overview>section{
+   width: 60%;
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+}
 
 
  footer{
@@ -359,17 +388,23 @@ footer{
 /**********************************************************************************************/
 
 @media screen and (min-width: 700px){
-
-  .staff-forms{
-    height: 
-  }
-
+  /*Victims*/
+#tracking{
+  width:60%;
+}
 
   .staff-forms > form{
-   
-   width:40%;
-   
-
+      width:40%;
+    }
+ /************Dashboard**********************/
+ #overview{
+ display: flex;
+ flex-direction: row;
+ justify-content: space-between;
+ margin: 0 10%;
+ }
+ #overview>section{
+  padding: 5%;
  }
 
 }

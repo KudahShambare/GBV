@@ -11,6 +11,7 @@ import Victims from "./pages/Victims";
 import SocialWorker from "./pages/SocialWorker";
 import SocialWorkerLogIn from "./pages/sub-pages/SocialWorkerLogIn";
 import Auxillary from "./pages/Auxillary";
+import AuxillaryLogIn from "./pages/sub-pages/AuxillaryLogIn";
 import Administrators from "./pages/Administrators";
 import AdminLogin from "./pages/sub-pages/AdminLogin";
 import Cases from "./pages/sub-pages/Cases";
@@ -39,6 +40,9 @@ function App() {
         <Route exact path="/administrators-log-in" component={AdminLogin} />
 
     <Route exact path="/auxillary-social-worker" component={Auxillary} />
+        <Route exact path="/auxillary-social-worker-log-in" component={AuxillaryLogIn} />
+
+
     <Route exact path="/faq" component={FAQ} />
     <Route exact path="/victims" component={Victims} />
  
