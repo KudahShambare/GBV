@@ -14,7 +14,7 @@ const SocialWorkerSignUp = ()=>{
 		<input type="text" name="fullname" placeholder="Full Name" required />
 		{/* <input type="text" name="social-worker-surname" placeholder="Last Name" required /> */}
 		<input type="text" name="employeeID" placeholder="Employee ID" required />
-		<input type="email" name="social-worker-email" placeholder="Email" required />
+		<input type="email" name="userName" placeholder="Email" required />
 		<input type="password" name="password" placeholder="password" required />
          <button className="form-buttons"> Sign Up </button>
 
