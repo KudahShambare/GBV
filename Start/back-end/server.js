@@ -161,7 +161,7 @@ app.get("/getCallbacks", (req, resp) => {
 //Registration of referring organisations
 app.use(referringOrgRegister);
 
-app.post("/referingOrganisationsRegistration", (req, resp) => {
+app.post("/referringOrganizationsRegistration", (req, resp) => {
 	console.log("In Kuda endpoint");
 	let name = req.body.orgName;
 	let location = req.body.location;
