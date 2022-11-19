@@ -26,7 +26,7 @@ router.post("/users", async (req, resp) => {
 			"INSERT INTO users (name,employee_id,password, date_created, role_id) VALUES ($1,$2,$3,$4, (SELECT id FROM roles WHERE name=$5))";
 		let funderQuery =
 			"INSERT INTO users (employee_id, password, date_created, role_id) VALUES($1,$2,$3, (SELECT id FROM roles WHERE name=$4))";
-		if (userName) {
+		if (!employeeID) {
 			client.query(
 				funderQuery,
 				[userName, hashedPassword, dateCreated, userType],
