@@ -10,12 +10,12 @@ const SocialWorkerSignUp = ()=>{
 
 
 		<h4> Touching Nations Social Worker Sign In</h4>
-<form>
-		<input type="text" name="social-worker-name" placeholder="First Name" required />
+<form method="post" action="http://localhost:8000/users">
+		<input type="text" name="fullname" placeholder="First Name" required />
 		<input type="text" name="social-worker-surname" placeholder="Last Name" required />
-		<input type="text" name="employee-id" placeholder="Employee ID" required />
+		<input type="text" name="employeeID" placeholder="Employee ID" required />
 		<input type="email" name="social-worker-email" placeholder="Email" required />
-		<input type="password" name="social-worker-password" placeholder="password" required />
+		<input type="password" name="password" placeholder="password" required />
          <button className="form-buttons"> Sign Up </button>
 
       <Link to="/social-worker-log-in">
