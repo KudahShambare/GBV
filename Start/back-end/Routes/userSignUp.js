@@ -19,7 +19,7 @@ client.connect();
 router.post("/users", async (req, resp) => {
 	try {
 		console.log(req.body);
-		let { fullname, employeeID, password, userName, userType } = req.body;
+		let { fullname, employeeID, password, userName } = req.body;
 		let dateCreated = new Date();
 		const hashedPassword = await bcrypt.hash(password, 10);
 		let socialWorkerQuery =
