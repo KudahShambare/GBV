@@ -1,6 +1,19 @@
 const express = require("express");
+const passport = require("passport");
+const methodOverride = require("method-override");
 
 const router = express.Router();
+
+const initializePassport = require("./passport-config");
+initializePassport(
+	passport,
+	(email) => users.find((user) => user.email === email),
+	(id) => users.find((user) => user.id === id)
+);
+
+router.use(passport.initialize());
+router.use(passport.session());
+router.use(methodOverride("_method"));
 
 router.get("/", checkAuthenticated, (req, res) => {
 	res.render("index.ejs", { name: req.user.name });

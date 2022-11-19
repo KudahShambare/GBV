@@ -9,9 +9,7 @@ const express = require("express");
 const bcrypt = require("bcrypt");
 const flash = require("express-flash");
 const expressSession = require("express-session");
-const methodOverride = require("method-override");
 const bodyParser = require("body-parser");
-const passport = require("passport");
 const { v4: uuidV4 } = require("uuid");
 const clientForm = require("./Routes/clientForm");
 const referralForm = require("./Routes/referralForm");
@@ -24,13 +22,6 @@ const managerAuth = require("./Routes/SuperManagerEmployeeIDAuthentication");
 const referringOrgRegister = require("./Routes/referringOrgForm");
 const ejs = require("./ejs");
 const jwt = require("jsonwebtoken");
-
-const initializePassport = require("./passport-config");
-initializePassport(
-	passport,
-	(email) => users.find((user) => user.email === email),
-	(id) => users.find((user) => user.id === id)
-);
 
 const { Client } = require("pg");
 const cors = require("cors");
@@ -56,9 +47,7 @@ app.use(
 		saveUninitialized: false,
 	})
 );
-app.use(passport.initialize());
-app.use(passport.session());
-app.use(methodOverride("_method"));
+
 
 //Routes to demo login
 app.use(ejs);
