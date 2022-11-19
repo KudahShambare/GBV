@@ -42,7 +42,7 @@ router.post("/users", async (req, resp) => {
 		} else {
 			client.query(
 				socialWorkerQuery,
-				[fullname, employeeID, hashedPassword, dateCreated, userType],
+				[fullname, employeeID, hashedPassword, dateCreated, "Social Worker"],
 				(err, response) => {
 					if (err) throw err;
 					resp
