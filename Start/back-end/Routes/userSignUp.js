@@ -15,7 +15,7 @@ const client = new Client({
 });
 
 client.connect();
-
+//Add check to see if user exists already
 router.post("/users", async (req, resp) => {
 	try {
 		console.log(req.body);
