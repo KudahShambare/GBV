@@ -15,7 +15,7 @@ const Victims=()=>{
 
 <Tracking/>
 
-<p className="fix"> Give a brief story aabout GBV and how to avoid it  </p>
+
 
 <ReportCase/>
 

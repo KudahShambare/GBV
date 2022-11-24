@@ -10,7 +10,7 @@ const AuxillaryLogIn =()=>{
 <div className="pages">  
 <section className="blank"> </section>
  <div className="staff-forms" id="auxillary-login">
-<h4> Auxillary Social Worker Log In </h4>
+<h4> Social Auxillary Worker Log In </h4>
 
 <form>
  <input type="email" name="auxillary-login-email" placeholder="Email" required/>

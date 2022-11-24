@@ -25,7 +25,7 @@ const getCase=(e)=>{
 <form>
 
 <input type="text" placeholder="Case Number" name="case" required onChange={getCase}/> 
-<button onClick={findCase}> Track </button>
+<button onClick={findCase} id="track-button">  Track </button>
 
 </form>
 </div>

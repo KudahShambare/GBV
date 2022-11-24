@@ -4,14 +4,13 @@ const LogInRefOrg =()=>{
 <div className="form-ref-org">
 <h3> Refferal Organisation Sign-in </h3>
 
-<form>
+<form className="staff-forms">
 
-<input type="text" placeholder="Organisation Name" required/>
-<input type="email" placeholder="Organisation Email" required/>
-<input type="text" placeholder="Organisation Phone" required/>
-<input type="text" placeholder="Organisation Rep" required/>
-<input type="email" placeholder="Rep Email" required />
-<input type="text" placeholder="Rep Phone" required/> <br/>
+<input type="text" placeholder="Organisation Name" name="name" required/><br/>
+<input type="email" placeholder="Organisation Email" name="email" required/><br/>
+<input type="text" placeholder="Organisation Rep"  name="repname" required/><br/>
+<input type="email" placeholder="Rep Email" name="repemail" required />
+ <br/>
 <button className="form-buttons"> Sign In </button>
 </form>
 </div>

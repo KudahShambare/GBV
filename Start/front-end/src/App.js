@@ -16,6 +16,7 @@ import Administrators from "./pages/Administrators";
 import AdminLogin from "./pages/sub-pages/AdminLogin";
 import Cases from "./pages/sub-pages/Cases";
 import ManagerDashboard from "./pages/sub-pages/ManagerDashboard";
+import SocialWorkerDashboard from "./pages/sub-pages/SocialWorkerDashboard";
 
 
 
@@ -49,6 +50,7 @@ function App() {
    //Restricted Routes
    <Route exact path ="/cases" component={Cases} />
    <Route exact path="/manager-dashboard" component={ManagerDashboard} />
+  <Route exact path="/social-worker-dashboard" component={SocialWorkerDashboard} />
 
      <Route component={NoPageFound} />
  </Switch>

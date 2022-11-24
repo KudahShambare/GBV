@@ -5,104 +5,36 @@ import 'react-accessible-accordion/dist/fancy-example.css';
 
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
+import questions from "../assets/JSON/faq.json";
 
 const FAQ=()=>{
 	return(
 		<>
 		<NavBar/>
 <div className="pages">
-<section id="faq-container" className="fix">
-        <Accordion >
+<section id="faq-container" >
+
+{questions.map((qn)=>{
+    return (
+
+<Accordion >
             <AccordionItem>
                 <AccordionItemHeading>
                     <AccordionItemButton>
-                        Question 1?
+                        {qn.question}
                     </AccordionItemButton>
                 </AccordionItemHeading>
                 <AccordionItemPanel className="faq-answer">
                     <p>
-                        Exercitation in fugiat est ut ad ea cupidatat ut in
-                        cupidatat occaecat ut occaecat consequat est minim minim
-                        esse tempor laborum consequat esse adipisicing eu
-                        reprehenderit enim.
+                      {qn.response}
                     </p>
                 </AccordionItemPanel>
             </AccordionItem>
-            <AccordionItem>
-                <AccordionItemHeading>
-                    <AccordionItemButton>
-                        Question 2?
-                    </AccordionItemButton>
-                </AccordionItemHeading>
-                <AccordionItemPanel className="faq-answer">
-                    <p>
-                        In ad velit in ex nostrud dolore cupidatat consectetur
-                        ea in ut nostrud velit in irure cillum tempor laboris
-                        sed adipisicing eu esse duis nulla non.
-                    </p>
-                </AccordionItemPanel>
-            </AccordionItem>
-              <AccordionItem>
-                <AccordionItemHeading>
-                    <AccordionItemButton>
-                        Question 3?
-                    </AccordionItemButton>
-                </AccordionItemHeading>
-                <AccordionItemPanel className="faq-answer">
-                    <p>
-                        Exercitation in fugiat est ut ad ea cupidatat ut in
-                        cupidatat occaecat ut occaecat consequat est minim minim
-                        esse tempor laborum consequat esse adipisicing eu
-                        reprehenderit enim.
-                    </p>
-                </AccordionItemPanel>
-            </AccordionItem>
-              <AccordionItem>
-                <AccordionItemHeading>
-                    <AccordionItemButton>
-                        Question 4?
-                    </AccordionItemButton>
-                </AccordionItemHeading>
-                <AccordionItemPanel className="faq-answer">
-                    <p>
-                        Exercitation in fugiat est ut ad ea cupidatat ut in
-                        cupidatat occaecat ut occaecat consequat est minim minim
-                        esse tempor laborum consequat esse adipisicing eu
-                        reprehenderit enim.
-                    </p>
-                </AccordionItemPanel>
-            </AccordionItem>
-              <AccordionItem>
-                <AccordionItemHeading>
-                    <AccordionItemButton>
-                        Question 5?
-                    </AccordionItemButton>
-                </AccordionItemHeading>
-                <AccordionItemPanel className="faq-answer">
-                    <p>
-                        Exercitation in fugiat est ut ad ea cupidatat ut in
-                        cupidatat occaecat ut occaecat consequat est minim minim
-                        esse tempor laborum consequat esse adipisicing eu
-                        reprehenderit enim.
-                    </p>
-                </AccordionItemPanel>
-            </AccordionItem>
-              <AccordionItem>
-                <AccordionItemHeading >
-                    <AccordionItemButton>
-                        Question 6?
-                    </AccordionItemButton>
-                </AccordionItemHeading>
-                <AccordionItemPanel className="faq-answer">
-                    <p>
-                        Exercitation in fugiat est ut ad ea cupidatat ut in
-                        cupidatat occaecat ut occaecat consequat est minim minim
-                        esse tempor laborum consequat esse adipisicing eu
-                        reprehenderit enim.
-                    </p>
-                </AccordionItemPanel>
-            </AccordionItem>
-        </Accordion>
+                  </Accordion>
+
+        )
+})}
+        
  
 
 </section>

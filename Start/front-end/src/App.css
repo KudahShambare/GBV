@@ -112,12 +112,28 @@ h4{
   width: 80%;
   padding-bottom: 5%;
 }
+.demos p{
+  margin-left: 5%;
+}
+/*Callback*/
+#callback{
+  display: flex;
+  flex-direction: column;
+  width:80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+#callback input{
+  margin-bottom: 2%;
+}
+
 /*********************************************************************************************************/
 /*Victims*/
 #tracking{
   background-color: black;
   text-align: center;
   padding-bottom: 5%;
+  margin-bottom: 5%;
 }
 #tracking > input{
   height: 20vh;
@@ -134,18 +150,20 @@ h4{
   margin-right: auto;
 }
 /*report form*/
-#report-form{
-  background-color: white;
-  display: block;
+#report-form {
+  display: flex;
+  flex-direction: column;
   margin-right: auto;
   margin-left: auto;
-  width:80%;
   text-align: center;
   padding-top: 5%;
   padding-bottom: 5%;
-  margin-bottom: 5%;
+   margin-top: 5%;
 }
 .report-input{
+    width:80%;
+  margin-right: auto;
+  margin-left: auto;
   margin-bottom: 2%;
   text-align: center;
 }
@@ -190,6 +208,9 @@ button{
 .form-buttons{
   background-color:green;
   color:white;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
 }
 #emergency{
   background-color: red;
@@ -268,7 +289,7 @@ button{
   color:white;
 }
 /****************************************************************************************************************/
-/*Dashboard*/
+/* Manager Dashboard*/
 #overview{
   margin-top: 10%;
   
@@ -283,7 +304,14 @@ button{
   margin-top: 5%;
     color: gold;
 }
-
+/********************************************************************************************************/
+/*Socia;l Dashboar*/
+.profile{
+  background-color: white;
+  width:80vw;
+  height:auto;
+  margin-top: 10%;
+}
 /***************************************************************************************************************/ 
 /*Footer*/
 footer{
@@ -304,8 +332,12 @@ footer{
   column-gap: 5%;
   padding-top: 5%;
 }
+#map{
+  margin-top: 5%;
+}
 #cyf{
   width:20vw;
+  margin-bottom: 5%;
 }
 /***********************************************************************************************************************/
 /*Tablet View*/
@@ -343,6 +375,10 @@ footer{
   width:20vw;
   height: 25vh;
 }
+/*Home****************************************/
+#callback{
+  width:60%;
+  }
 /*********************Staff**************/
 #staff-container{ 
   flex-direction: row;
@@ -366,6 +402,20 @@ footer{
   text-align: center;
 
 }
+#track-button{
+  background-color: green;
+  color:white;
+  margin-left: 0.5%;
+  padding: 1%;
+}
+#report-img{
+  width:70%;
+
+}
+.report-input{
+    width:60%;
+  
+}
  /*************************Dashboard**********************************************/
  #overview>section{
    width: 60%;
@@ -380,17 +430,35 @@ footer{
   padding-left: 5%;
 }
  #footer-contents{
-  flex-direction: row;
+  flex-direction: grid;
+  grid-template-columns: auto auto;
+  margin-bottom: 5%;
 
+ }
+ #map{
+  margin-top: 1%;
+ }
+ #our-contact{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
  }
 
 }
 /**********************************************************************************************/
 
 @media screen and (min-width: 700px){
+  /*Home*/
+  #callback{
+  width:40%;
+  }
   /*Victims*/
 #tracking{
   width:60%;
+}
+.report-input{
+    width:50%;
+
 }
 
   .staff-forms > form{
