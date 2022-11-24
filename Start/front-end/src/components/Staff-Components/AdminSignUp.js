@@ -1,6 +1,6 @@
-import  { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
-const AdminSignUp = ()=>{
+const AdminSignUp = () => {
 	return (
 		<div className="staff-forms">
 			<h4> Administrator Sign Up </h4>
@@ -50,5 +50,5 @@ const AdminSignUp = ()=>{
 			</Link>
 		</div>
 	);
-}
+};
 export default AdminSignUp;
