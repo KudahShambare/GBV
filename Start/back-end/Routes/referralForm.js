@@ -16,7 +16,7 @@ const client = new Client({
 
 client.connect();
 
-router.post("/api/gbv-referring-organisation-form", (req, res, next) => {
+router.post("/api/gbv-referring-organization-form", (req, res, next) => {
 	console.log("Form route triggered");
 	console.log(req.body);
 	const dateCreated = new Date();
@@ -52,7 +52,7 @@ router.post("/api/gbv-referring-organisation-form", (req, res, next) => {
 		relationshipToAbuser,
 		referredBy,
 		referrerTitle,
-		organisation,
+		organization,
 		orgType,
 		orgTel,
 		orgCel,
@@ -67,7 +67,7 @@ router.post("/api/gbv-referring-organisation-form", (req, res, next) => {
 		"INSERT INTO clients (name, gender_id, address, date_of_birth, phone_number, race_id, languages, education_level, marital_status_id, date_created, client_id, alternate_contact) VALUES($1,(SELECT id FROM gender WHERE name=$2),$3,$4,$5,(SELECT id FROM races WHERE name=$6),$7,$8,(SELECT id FROM marital_status WHERE name=$9),$10,$11,$12)";
 	const abuserQuery =
 		"INSERT INTO abusers (name, contact_number, gender_id, relationship_to_client, date_created) VALUES($1,$2,(SELECT id FROM gender WHERE name=$3),$4,$5)";
-	const organisationQuery =
+	const organizationQuery =
 		"INSERT INTO referring_organizations (organization_name, location, contact_number, email, authorized_person_name, organization_type, touching_nations_id, date_created, authorized_person_contact) VALUES($1,$2,$3,$4,$5,$6,$7,$8,$9)";
 	const casesQuery =
 		"INSERT INTO cases (case_number, client_id, abuser_id, abuse_id, date_created, details_of_incident, case_type_id, case_status_id) VALUES($1,(SELECT client_id FROM clients WHERE name=$2 LIMIT 1),(SELECT id FROM abusers WHERE name=$3 LIMIT 1),(SELECT id FROM abuses WHERE type_of=$4),$5,$6,(SELECT id from case_type WHERE name=$7),(SELECT id FROM case_status WHERE name=$8))";
@@ -144,7 +144,7 @@ router.post("/api/gbv-referring-organisation-form", (req, res, next) => {
 						}
 						client.query(
 							"SELECT id FROM referring_organizations WHERE organization_name=$1 and location=$2",
-							[organisation, orgAddress],
+							[organization, orgAddress],
 							(err, response) => {
 								if (err) throw err;
 								if (response.rows.length > 0) {
@@ -152,9 +152,9 @@ router.post("/api/gbv-referring-organisation-form", (req, res, next) => {
 									next();
 								} else {
 									client.query(
-										organisationQuery,
+										organizationQuery,
 										[
-											organisation,
+											organization,
 											orgAddress,
 											orgTel,
 											orgEmail,
@@ -192,7 +192,7 @@ router.post("/api/gbv-referring-organisation-form", (req, res, next) => {
 										client.query(
 											referralQuery,
 											[
-												organisation,
+												organization,
 												fullName,
 												dateCreated,
 												secondaryNumber,

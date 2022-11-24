@@ -15,19 +15,20 @@ const client = new Client({
 });
 
 client.connect();
-
+//Add check to see if user exists already
 router.post("/users", async (req, resp) => {
 	try {
-		let { fullname, employeeID, password, userName, userType } = req.body;
+		console.log(req.body);
+		let { fullname, employeeID, password, userName } = req.body;
 		let dateCreated = new Date();
 		const hashedPassword = await bcrypt.hash(password, 10);
 		let socialWorkerQuery =
 			"INSERT INTO users (name,employee_id,password, date_created, role_id) VALUES ($1,$2,$3,$4, (SELECT id FROM roles WHERE name=$5))";
-		let funderQUery =
+		let funderQuery =
 			"INSERT INTO users (employee_id, password, date_created, role_id) VALUES($1,$2,$3, (SELECT id FROM roles WHERE name=$4))";
-		if (userName) {
+		if (!employeeID) {
 			client.query(
-				funderQUery,
+				funderQuery,
 				[userName, hashedPassword, dateCreated, userType],
 				(err, response) => {
 					if (err) throw err;
@@ -41,7 +42,7 @@ router.post("/users", async (req, resp) => {
 		} else {
 			client.query(
 				socialWorkerQuery,
-				[fullname, employeeID, hashedPassword, dateCreated, userType],
+				[fullname, employeeID, hashedPassword, dateCreated, "Social Worker"],
 				(err, response) => {
 					if (err) throw err;
 					resp

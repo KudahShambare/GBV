@@ -1,31 +1,35 @@
 import { Link } from "react-router-dom";
 
-const SocialWorkerSignUp = ()=>{
-	
-	return(
-
-
+const SocialWorkerSignUp = () => {
+	return (
 		<div className="staff-forms">
-		
+			<h4> Touching Nations Social Worker Sign Up</h4>
+			<form
+				method="post"
+				action="https://plum-perfect-pronghorn.cyclic.app/users"
+			>
+				<input type="text" name="fullname" placeholder="Full Name" required />
+				{/* <input type="text" name="social-worker-surname" placeholder="Last Name" required /> */}
+				<input
+					type="text"
+					name="employeeID"
+					placeholder="Employee ID"
+					required
+				/>
+				<input type="email" name="userName" placeholder="Email" required />
+				<input
+					type="password"
+					name="password"
+					placeholder="password"
+					required
+				/>
+				<button className="form-buttons"> Sign Up </button>
 
-
-		<h4> Touching Nations Social Worker Sign In</h4>
-<form>
-		<input type="text" name="social-worker-name" placeholder="First Name" required />
-		<input type="text" name="social-worker-surname" placeholder="Last Name" required />
-		<input type="text" name="employee-id" placeholder="Employee ID" required />
-		<input type="email" name="social-worker-email" placeholder="Email" required />
-		<input type="password" name="social-worker-password" placeholder="password" required />
-         <button className="form-buttons"> Sign Up </button>
-
-      <Link to="/social-worker-log-in">
-         <span className="toggle-form"> Already Have An Account </span>
-</Link>
-
-		</form>
-
-
+				<Link to="/social-worker-log-in">
+					<span className="toggle-form"> Already Have An Account </span>
+				</Link>
+			</form>
 		</div>
-	)
-}
+	);
+};
 export default SocialWorkerSignUp;

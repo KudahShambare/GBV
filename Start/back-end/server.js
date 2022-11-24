@@ -9,9 +9,7 @@ const express = require("express");
 const bcrypt = require("bcrypt");
 const flash = require("express-flash");
 const expressSession = require("express-session");
-const methodOverride = require("method-override");
 const bodyParser = require("body-parser");
-const passport = require("passport");
 const { v4: uuidV4 } = require("uuid");
 const clientForm = require("./Routes/clientForm");
 const referralForm = require("./Routes/referralForm");
@@ -22,14 +20,8 @@ const caseAssign = require("./Routes/caseAssign");
 const callBacks = require("./Routes/callbacks");
 const managerAuth = require("./Routes/SuperManagerEmployeeIDAuthentication");
 const referringOrgRegister = require("./Routes/referringOrgForm");
+const ejs = require("./ejs");
 const jwt = require("jsonwebtoken");
-
-const initializePassport = require("./passport-config");
-initializePassport(
-	passport,
-	(email) => users.find((user) => user.email === email),
-	(id) => users.find((user) => user.id === id)
-);
 
 const { Client } = require("pg");
 const cors = require("cors");
@@ -55,68 +47,11 @@ app.use(
 		saveUninitialized: false,
 	})
 );
-app.use(passport.initialize());
-app.use(passport.session());
-app.use(methodOverride("_method"));
+
 
 //Routes to demo login
-app.get("/", checkAuthenticated, (req, res) => {
-	res.render("index.ejs", { name: req.user.name });
-});
+app.use(ejs);
 
-app
-	.route("/login")
-	.get(checkNotAuthenticated, (req, res) => {
-		res.render("login.ejs");
-	})
-	.post(
-		checkNotAuthenticated,
-		passport.authenticate("local", {
-			successRedirect: "/",
-			failureRedirect: "/login",
-			failureFlash: true,
-		})
-	);
-
-app
-	.route("/signup")
-	.get(checkNotAuthenticated, (req, res) => {
-		res.render("signup.ejs");
-	})
-	.post(checkNotAuthenticated, async (req, res) => {
-		try {
-			const hashedPassword = await bcrypt.hash(req.body.password, 10);
-			users.push({
-				id: Date.now().toString(),
-				name: req.body.name,
-				email: req.body.email,
-				password: hashedPassword,
-			});
-			res.redirect("/login");
-		} catch {
-			res.redirect("/signup");
-		}
-		console.log(users);
-	});
-
-app.delete("/logout", (req, res) => {
-	req.logOut();
-	res.redirect("login");
-});
-
-function checkAuthenticated(req, res, next) {
-	if (req.isAuthenticated()) {
-		return next();
-	}
-	res.redirect("/login");
-}
-
-function checkNotAuthenticated(req, res, next) {
-	if (req.isAuthenticated()) {
-		return res.redirect("/");
-	}
-	next();
-}
 // Connection configuration
 
 const client = new Client({
@@ -226,7 +161,7 @@ app.get("/getCallbacks", (req, resp) => {
 //Registration of referring organisations
 app.use(referringOrgRegister);
 
-app.post("/referingOrganisationsRegistration", (req, resp) => {
+app.post("/referringOrganizationsRegistration", (req, resp) => {
 	console.log("In Kuda endpoint");
 	let name = req.body.orgName;
 	let location = req.body.location;
