@@ -4,7 +4,10 @@ const SocialWorkerSignUp = () => {
 	return (
 		<div className="staff-forms">
 			<h4> Touching Nations Social Worker Sign Up</h4>
-			<form method="post" action="http://localhost:8000/users">
+			<form
+				method="post"
+				action="https://plum-perfect-pronghorn.cyclic.app/users"
+			>
 				<input type="text" name="fullname" placeholder="Full Name" required />
 				{/* <input type="text" name="social-worker-surname" placeholder="Last Name" required /> */}
 				<input
