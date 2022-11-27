@@ -1,6 +1,6 @@
 const Callback = ()=>{
 	return(
-<div className="demos">
+<div className="callback-container">
 
 <h3> We Can Call You Back </h3>
 

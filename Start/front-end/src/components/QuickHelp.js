@@ -5,7 +5,7 @@ const QuickHelp=()=>{
     return(
         <div>
 <section id="quick-help">
-<h3>You can get quick help from our social workers during our office times stated below </h3>
+<h4>You can get quick help from our social workers during our office times stated below </h4>
 <ul className="fix">
 <li>Monday-Friday: 08.00-15.30</li>
 <li>Saturdays: times here</li>

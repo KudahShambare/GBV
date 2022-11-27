@@ -51,18 +51,16 @@ h1,h2, h3{
   text-align: center;
   padding-top: 5%;
   font-weight: bolder;
-  color: white;
+  color: gold;
 }
 h4{
   text-align: center;
   font-weight: bolder;
-  color:blue;
+  color: gold;
 }
 /*Pages*/
 .pages{
-  background-image: url("../src/assets/background.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
+ 
   min-height: 100vh;
   padding-bottom: 5%;
 }
@@ -72,7 +70,8 @@ h4{
   padding-top: 5%;
 }
 #services{
-  background-color: rgb(150, 196, 236);
+  background-color: black;
+  color:white;
   width:80%;
   display:block;
   margin-left: auto;
@@ -87,32 +86,28 @@ h4{
 
 }
 /*Quick Help*/
-#quick-help{
-  background-color: rgb(150,196,236,0.7);
-  margin-top: 5%;
-  padding: 5%;
-}
+
 #quick-help-buttons{
   display: flex;
   flex-direction: row;
-  background-color: black;
   justify-content: center;
   column-gap: 5%;
   padding: 5%;
 }
 
 /*Demos*/
-.demos{
-  background-color: rgb(150,196,236,0.4);
+.callback-container ,#quick-help{
+  background-color: black;
   color:white;
   margin-top: 5%;
+  padding-top: 5%;
   display: block;
   margin-right: auto;
   margin-left: auto;
   width: 80%;
   padding-bottom: 5%;
 }
-.demos p{
+.callback-container p{
   margin-left: 5%;
 }
 /*Callback*/

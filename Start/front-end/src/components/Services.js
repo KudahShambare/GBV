@@ -2,8 +2,8 @@ import React from "react";
 
 const Services = () => {
   return (
-    <div id="services">
-      <h1>Fighting Gender Based Violence in Cape Town</h1>
+    <div id="services" className="fix">
+      <h2>Welcome Message</h2>
 
       <p>
         {" "}
@@ -11,13 +11,8 @@ const Services = () => {
         of what is gender based violence and its state in Cape tOWN A WELL AS
         THE EFforts and measures put in place by the organization to fight GBV{" "}
       </p>
-      <h2>Our Partners</h2>
-      <ul className="hidden-list">
-        <li>Police</li>
-        <li className="fix">List all other partners</li>
-      </ul>
-      
-    </div>
+      </div>
+   
   );
 };
 export default Services;
