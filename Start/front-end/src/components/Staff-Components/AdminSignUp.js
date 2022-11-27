@@ -16,12 +16,12 @@ const AdminSignUp = () => {
 					required
 				/> */}
 				<input type="email" name="userName" placeholder="Email" required />
-				<input
+				{/* <input
 					type="text"
 					name="touchingNationsId"
 					placeholder="Touching Nations ID"
 					required
-				/>
+				/> */}
 				<input
 					type="password"
 					name="password"
