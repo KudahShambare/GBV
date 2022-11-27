@@ -137,7 +137,8 @@ h4{
   background-color: rgb(150,196,236,0.7);
 }
 #report{
-  background-color: white;
+  background-color: black;
+  color: white;
   border: bold solid;
   width: 80%;
   display:block;
@@ -168,18 +169,47 @@ label{
   color: blue;
 }
 /*report image*/
+#report figure{
+  background-color: white;
+  margin: 5%;
+}
 #report-img{
+
   width:90%;
   display: block;
   margin-right: auto;
   margin-left: auto;
+  padding:5%;
+}
+/***************************************************************************************************/
+/*Cases*/
+#case-status{
+  display: flex;
+  flex-direction: column;
+}
+#case-status section{
+   height:20vh;
+    margin: 2%;
+    width:80%;
+    margin-right: auto;
+    margin-left: auto;
+
+}
+.unresolved{
+
+  background-color: grey;
+ 
+
+}
+.resolved{
+  background-color: green;
 }
 /*******************************************************************************************************************/
 
 /*Reffering Organisation*/
 
 .form-ref-org{
-  background-color: rgb(150,196,236);
+  background-color: black;
   text-align: center;
   margin-top: 5%;
   width:80%;
@@ -219,15 +249,13 @@ button{
   text-decoration: none;
   color: white;
 }
-.learn-more{
-  display: block;
-  margin-right: auto;
-  margin-left: auto;
-  background-color: orange;
+#track-button{
+  background-color: green;
   color:white;
-  margin-bottom: 5%; 
-
+  margin-left: 0.5%;
+  padding: 1%;
 }
+
 .hidden-links{
   text-decoration: none;
 }
@@ -279,7 +307,7 @@ button{
   width: 80%;
 }
 .faq-answer{
-  background-color: rgb(150,196,236,0.4);
+  background-color:black;
   padding: 5%;
   color:white;
 }
@@ -397,12 +425,7 @@ footer{
   text-align: center;
 
 }
-#track-button{
-  background-color: green;
-  color:white;
-  margin-left: 0.5%;
-  padding: 1%;
-}
+
 #report-img{
   width:70%;
 

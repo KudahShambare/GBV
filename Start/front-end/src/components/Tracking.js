@@ -1,8 +1,11 @@
 import React, {useEffect,useState} from "react";
+import { useHistory } from "react-router-dom";
 
 
 
 const Tracking = ()=>{
+
+	const history = useHistory();
 
 //state
 const [caseNumber,setCaseNumber]=useState("");
@@ -15,7 +18,23 @@ const getCase=(e)=>{
 
 	const findCase = ()=>{
 
-		alert("case Number\n"+caseNumber);
+if(caseNumber.length!=0){
+
+		if(caseNumber==5){
+			alert("right");
+			history.push("/my-case/"+caseNumber)
+			
+
+		}
+		else{
+			alert("wrong");
+			history.back();
+		}
+
+}else{
+	alert("Invalid Input")
+}
+
 
 	}
 	return(

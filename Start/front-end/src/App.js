@@ -15,6 +15,7 @@ import AuxillaryLogIn from "./pages/sub-pages/AuxillaryLogIn";
 import Administrators from "./pages/Administrators";
 import AdminLogin from "./pages/sub-pages/AdminLogin";
 import Cases from "./pages/sub-pages/Cases";
+import CaseDetails from "./pages/sub-pages/CaseDetails";
 import ManagerDashboard from "./pages/sub-pages/ManagerDashboard";
 import SocialWorkerDashboard from "./pages/sub-pages/SocialWorkerDashboard";
 
@@ -48,9 +49,10 @@ function App() {
     <Route exact path="/victims" component={Victims} />
  
    //Restricted Routes
-   <Route exact path ="/cases" component={Cases} />
-   <Route exact path="/manager-dashboard" component={ManagerDashboard} />
-  <Route exact path="/social-worker-dashboard" component={SocialWorkerDashboard} />
+   <Route exact path ="/cases" component={Cases} /> //allowed social workers and managers
+   <Route exact path="/my-case/:number" component={CaseDetails}/> //sucessful track case
+   <Route exact path="/manager-dashboard" component={ManagerDashboard} />//successful manager login
+  <Route exact path="/social-worker-dashboard" component={SocialWorkerDashboard} />//succesful social worker login
 
      <Route component={NoPageFound} />
  </Switch>

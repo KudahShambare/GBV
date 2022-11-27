@@ -10,7 +10,7 @@ const RefOrgs=()=>{
 		<NavBar/>
 <div className="pages">
 <section>
-<h2> Reffering Organisations </h2>
+
 
 
 </section>

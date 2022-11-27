@@ -11,8 +11,7 @@ const Victims=()=>{
 <NavBar/>
 <div className="pages"> 
 
-<h2> GBV Victims </h2>
-
+<section className="blank">  </section>
 <Tracking/>
 
 

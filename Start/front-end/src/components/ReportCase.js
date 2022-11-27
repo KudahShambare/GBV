@@ -11,7 +11,10 @@ const ReportCase=()=>{
 <div id="report">
 <section >
 <h2> Report Case </h2>
+<figure>
+
 <img src={noGBV} alt="ooops" id="report-img"/>
+</figure>
 </section>
 <section>
 <form id="report-form" method="post" action="https://ill-ruby-buffalo-yoke.cyclic.app/cases">
