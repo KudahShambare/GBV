@@ -15,10 +15,10 @@ const AdminSignUp = () => {
 					placeholder="Last Name"
 					required
 				/> */}
-				<input type="email" name="admin-email" placeholder="Email" required />
+				<input type="email" name="userName" placeholder="Email" required />
 				<input
 					type="text"
-					name="userName"
+					name="touchingNationsId"
 					placeholder="Touching Nations ID"
 					required
 				/>
