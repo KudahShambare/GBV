@@ -28,8 +28,8 @@ const AdminSignUp = () => {
 					placeholder="Password"
 					required
 				/>
-				//Hi Kuda, staff role should be assigned by admin, not selected in
-				signup.
+				{/* Hi Kuda, staff role should be assigned by admin, not selected in
+				signup. */}
 				{/* <section className="staff-radios">
 					<label>Role</label>
 					<br />
