@@ -20,7 +20,7 @@ const SocialWorkerSignUp = () => {
         <input
           type="password"
           name="password"
-          placeholder="password"
+          placeholder="Password"
           required
         />
         <button className="form-buttons"> Sign Up </button>
