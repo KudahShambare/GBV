@@ -13,10 +13,10 @@ const SocialWorkerSignUp = () => {
         <input
           type="text"
           name="employeeID"
-          placeholder="Employee ID"
+          placeholder="Employee ID/Email"
           required
         />
-        <input type="email" name="userName" placeholder="Email" required />
+        {/* <input type="email" name="userName" placeholder="Email" required /> */}
         <input
           type="password"
           name="password"
