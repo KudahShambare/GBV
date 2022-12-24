@@ -14,7 +14,10 @@ const Auxillary = () => {
         ]<section className="blank"> </section>
         <div className="staff-forms">
           <h4> Social Auxillary Worker Sign Up </h4>
-          <form>
+          <form
+            method="post"
+            action="https://plum-perfect-pronghorn.cyclic.app/users"
+          >
             <input
               type="text"
               name="fullName"
