@@ -8,7 +8,7 @@ const AdminSignUp = () => {
         method="post"
         action="https://plum-perfect-pronghorn.cyclic.app/users"
       >
-        <input type="text" name="fullName" placeholder="First Name" required />
+        <input type="text" name="fullName" placeholder="First name" required />
         <input type="email" name="userName" placeholder="Email" required />
         <input
           type="password"

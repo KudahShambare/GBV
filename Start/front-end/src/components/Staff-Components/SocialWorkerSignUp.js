@@ -8,15 +8,13 @@ const SocialWorkerSignUp = () => {
         method="post"
         action="https://plum-perfect-pronghorn.cyclic.app/users"
       >
-        <input type="text" name="fullName" placeholder="Full Name" required />
-        {/* <input type="text" name="social-worker-surname" placeholder="Last Name" required /> */}
+        <input type="text" name="fullName" placeholder="Full name" required />
         <input
           type="text"
           name="employeeID"
           placeholder="Employee ID/Email"
           required
         />
-        {/* <input type="email" name="userName" placeholder="Email" required /> */}
         <input
           type="password"
           name="password"
@@ -24,7 +22,6 @@ const SocialWorkerSignUp = () => {
           required
         />
         <button className="form-buttons"> Sign Up </button>
-
         <Link to="/social-worker-log-in">
           <span className="toggle-form"> Already Have An Account </span>
         </Link>
