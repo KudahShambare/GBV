@@ -16,13 +16,13 @@ const SocialWorkerLogin = () => {
           >
             <input
               type="email"
-              name="social-login-email"
+              name="employeeID"
               placeholder="Email"
               required
             />
             <input
               type="password"
-              name="social-login-password"
+              name="password"
               placeholder="Password"
               required
             />
