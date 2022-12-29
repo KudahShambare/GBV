@@ -17,13 +17,13 @@ const AuxillaryLogIn = () => {
           >
             <input
               type="email"
-              name="auxillary-login-email"
+              name="employeeID"
               placeholder="Email"
               required
             />
             <input
               type="password"
-              name="auxillary-login-password"
+              name="password"
               placeholder="Password"
               required
             />
