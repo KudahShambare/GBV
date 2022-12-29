@@ -18,19 +18,13 @@ const AdminLogin = () => {
           >
             <input
               type="email"
-              name="admin-email"
+              name="employeeID"
               placeholder="Email"
               required
             />
             <input
-              type="text"
-              name="admin-id"
-              placeholder="Touching Nations ID"
-              required
-            />
-            <input
               type="password"
-              name="admin-password"
+              name="password"
               placeholder="Password"
               required
             />
